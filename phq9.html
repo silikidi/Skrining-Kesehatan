@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="id-id" style="--document-width: 100vw;--document-height: 100vh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sukma Budi with Gemini">
+<meta name="description" content="Merasa lelah atau kehilangan minat belakangan ini? Gunakan kuesioner PHQ-9 resmi dari RSUD Cibabat untuk deteksi dini gejala depresi secara praktis dan terpercaya.">
+<meta property="og:title" content="RSUD Cibabat - Skrining Depresi Dengan PHQ-9">
+<meta property="og:description" content="Merasa lelah atau kehilangan minat belakangan ini? Gunakan kuesioner PHQ-9 resmi dari RSUD Cibabat untuk deteksi dini gejala depresi secara praktis dan terpercaya.">
+<meta property="og:image" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta property="og:url" content="https://rsudcibabat.cimahikota.go.id/skrining/phq9.html">
+<meta property="og:site_name" content="RSUD Cibabat Official Website">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RSUD Cibabat - Skrining Depresi Dengan PHQ-9">
+<meta name="twitter:description" content="Merasa lelah atau kehilangan minat belakangan ini? Gunakan kuesioner PHQ-9 RSUD Cibabat untuk deteksi dini gejala depresi secara praktis dan terpercaya.">
+<meta property="twitter:image:src" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta name="twitter:url" content="https://rsudcibabat.cimahikota.go.id/skrining/phq9.html">
+<meta name="twitter:site" content="@rscibabat">
+
+<title>RSUD Cibabat - Skrining Depresi Dengan PHQ-9</title>
+
+<link rel="apple-touch-icon" href="../images/logo/rsclogo.png">
+<link rel="icon" type="image/svg+xml" href="../images/logo/rsclogo.webp">
+<link rel="canonical" href="https://rsudcibabat.cimahikota.go.id/skrining/phq9.html">
+<link href="./dist/tailwind.css" rel="stylesheet">
+<link href="../css/sweetalert2.min.css" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "RSUD Cibabat - Skrining Depresi Dengan PHQ-9",
+	"description": "Merasa lelah atau kehilangan minat belakangan ini? Gunakan kuesioner PHQ-9 RSUD Cibabat untuk deteksi dini gejala depresi secara praktis dan terpercaya." ,
+	"image": [
+		"../images/logo/rsudcibabatwebmin.jpg"
+	]
+}
+</script>
+<script src="../js/modern-screenshot4.6.8.min.js"></script>
+<script src="../js/sweetalert2.all.min.js"></script>
+<style>
+.bg-image {
+	background-image: url('../images/wallpaper/gradien1-minr.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+
+.btn-answer.selected {
+	background-color: #2563eb; /* Blue-600 */
+	color: white;
+	border-color: #1e40af;
+}
+
+.highlight-error { border: 2px solid #ef4444 !important; background-color: #fef2f2; }
+
+.question-block {
+	/*transition: all 0.3s ease; Transisi smooth untuk highlight */
+	scroll-margin-top: 100px; /* Memberi jarak saat scroll agar tidak tertutup header */
+}
+
+.pertanyaan-flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-content: flex-start;
+	gap: 20px;
+}
+.nomor-pertanyaan {
+	min-width: 75px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: white;
+	background: #77bfff;
+}
+
+#result-box {
+	background-image: url('../images/wallpaper/gradien6-min.jpg');
+	background-size: cover;
+	background-position: top left;
+}
+
+#capture-area {
+	background-color: white;
+}
+.hide-for-screenshot {
+	display: none !important;
+}
+
+button,
+.btn-answer {
+    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-answer.selected {
+    border: none !important;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+	font-size: 1.2em;
+	line-height: 1;
+    color: white !important;
+    background-color: #1e40af !important;
+}
+
+/* Efek saat tombol ditekan (Tap/Click) */
+.btn-answer:active {
+    transform: scale(0.95);
+}
+
+/* Memperbaiki responsivitas grid pada layar sangat kecil */
+.choice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+/* Efek Hover (Hanya aktif di perangkat yang mendukung pointer/mouse) */
+@media (hover: hover) {
+	button:hover,
+	.btn-answer:not(.selected):hover {
+        border-color: #3b82f6;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+}
+@media (max-width: 768px) {
+	.pertanyaan-flex {
+		gap: 10px;
+	}
+	.nomor-pertanyaan {
+		min-width: 45px;
+	}
+	.btn-answer.selected {
+		font-size: 1.1em;
+	}
+	#result-box {
+		background-position: center center;
+	}
+}
+@media (min-width: 768px) {
+    .choice-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media print { .no-print { display: none; } }
+
+/* ========== VERTICAL BRAND ========== */
+.vertical-tag {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	pointer-events: none;
+}
+.vertical-tag span {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	white-space: nowrap;
+}
+/* ========== VERTICAL BRAND ========== */
+</style>
+</head>
+<body class="bg-slate-50 font-sans text-gray-900 overflow-x-clip">
+
+<div id="capture-area" class="relative max-w-4xl mx-auto my-10 bg-white shadow-2xl rounded-2xl">
+
+	<header class="px-6 md:px-6 py-6 md:py-6">
+		<small class="text-sm leading-none">Instrumen PHQ-9</small>
+		<h1 class="text-3xl text-slate-800 font-black leading-none">Skrining Tingkat Depresi</h1>
+		<p class="text-md text-slate-700 font-semibold uppercase leading-none mt-2">Skrining Mandiri RSUD Cibabat</p>
+	</header>
+
+	<div class="p-6 md:p-6 mb-6 bg-[#f2f2f2] border-l-[5px] border-solid border-[#e1e1e1]">
+		<p class="text-sm font-bold mb-2">DISCLAIMER</p>
+		<p class="text-sm leading-tight mb-2">
+				<a href="../kebijakan-privasi.html" target="_blank">Privasi Anda dijamin UU PDP 27 2022</a> proses skrining sepenuhnya berjalan di browser client dan tidak ada data yang dikirim ataupun disimpan di server manapun.
+			Hasil skrining ini bukanlah diagnosis medis. Saran dan penegakkan diagnosis medis tetap dilakukan dengan konseling langsung bersama Dokter Ahli RSUD Cibabat.
+			Skrining mengacu pada <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1495268/" target="_blank" rel="noopener noreferrer">Kurt Kroenke et al.</a> (2001),
+			<a href="https://doi.org/10.3889/oamjms.2022.9293" target="_blank" rel="noopener noreferrer">Cut ND. et al.</a> (2022),
+			<a href="https://jurnal.ugm.ac.id/gamajpp/article/downloadSuppFile/83676/26217" target="_blank" rel="noopener noreferrer">Ramadhan DM. et al.</a> (2023)
+		</p>
+	</div>
+
+	<div id="questions-container" class="px-6 md:px-6"></div>
+
+	<div id="result-box" class="hidden p-6 md:p-6 mx-6 md:mx-6 rounded-[2rem] shadow-2xl overflow-hidden">
+		<div class="flex flex-col md:flex-row gap-0 md:gap-8 items-center z-10">
+			<div class="text-center md:border-r border-slate-700 md:pr-10">
+				<p class="text-[0.9em] text-[#0731a7] font-bold tracking-widest">SKOR ANDA</p>
+				<div id="result-score" class="text-8xl md:text-7xl text-[#0731a7] font-black">0</div>
+			</div>
+			<div class="flex-1">
+				<div id="result-category" class="text-4xl md:text-5xl text-center md:text-left text-[#0731a7] font-bold uppercase leading-none mb-2"></div>
+				<p id="result-recommendation" class="text-[1.1em] text-center md:text-left text-[#0731a7] leading-none tracking-[0.05em]"></p>
+				<p id="result-date" class="text-[0.6em] text-center md:text-left text-[#919191] font-bold uppercase tracking-widest mt-2"></p>
+			</div>
+		</div>
+		<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-blue-600/20 rounded-full blur-3xl"></div>
+	</div>
+
+	<!--
+	<div id="result-box" class="hidden p-6 md:p-6 mx-6 my-10 text-center rounded-md bg-[#ccf2fb] shadow-xl">
+		<small class="text-sm font-semibold text-slate-700">TOTAL SKOR</small>
+		<p id="result-score" class="text-6xl font-bold text-indigo-700"></p>
+		<p id="result-category" class="text-4xl font-bold text-indigo-700 uppercase my-2"></p>
+		<p id="result-recommendation" class="text-xl md:text-2xl text-slate-700 leading-none mb-4"></p>
+		<p id="result-date" class="text-[0.8em] text-slate-700"></p>
+	</div>
+	-->
+
+	<div class="px-6 md:px-6 mt-10 mb-10 flex flex-col flex-wrap justify-center gap-3 screenshot-target">
+		<button onclick="processResult()" class="px-2 md:px-8 py-5 text-[1.1em] md:text-[1.5em] bg-image font-bold uppercase leading-none border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Hitung</button>
+		<div class="grid grid-cols-2 gap-2">
+			<button onclick="takeScreenshot()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Screenshot</button>
+			<button onclick="shareWA()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Bagikan</button>
+		</div>
+		<div class="grid grid-cols-2 gap-2">
+			<button onclick="resetSurvey()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Reset</button>
+			<button onclick="balikKandang()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Kembali</button>
+		</div>
+	</div>
+
+	<div id="panel-klinik" class="space-y-4 px-8 rounded-b-2xl bg-image screenshot-target">
+		<div class="text-[3em] text-black text-center font-black leading-none pt-10">
+			Tenang.. dan Jangan Panik
+		</div>
+		<div class="text-[1.2em] md:text-[1.7em] font-semibold text-black text-center leading-tight py-4">
+			Rumah kedua hati untuk melangkah lebih baik bersama Dokter Spesialis Jiwa kami
+		</div>
+		<div class="text-[1.5em] md:text-[2.5em] text-black text-center font-black leading-none">
+			Konsultasi Dokter Ahli
+		</div>
+		<div class="grid grid-cols-2 gap-2 pb-20">
+			<button class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Janji Temu</button>
+			<button class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Profil Layanan</button>
+		</div>
+	</div>
+	
+	<div id="ghost" class="w-full h-[50px] m-0 p-0 hidden"></div>
+
+	<!-- VERTICAL BRAND -->
+	<div class="absolute vertical-tag left right-[97%] md:right-[100%] p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+
+	<div class="absolute vertical-tag right left-[97%] md:left-[100%] rotate-180 p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+	<!-- VERTICAL BRAND -->
+
+</div>
+
+<script>
+const questions = [
+	"Kurang berminat atau bergairah dalam melakukan sesuatu",
+	"Merasa sedih, depresi, atau putus asa",
+	"Sulit tidur, terjaga, atau terlalu banyak tidur",
+	"Merasa lelah atau kurang bertenaga",
+	"Kurang nafsu makan atau makan berlebihan",
+	"Merasa gagal atau mengecewakan diri sendiri atau keluarga",
+	"Sulit berkonsentrasi pada sesuatu [membaca atau menonton TV]",
+	"Bergerak atau berbicara lambat atau sebaliknya sangat gelisah",
+	"Berpikir lebih baik mati atau ingin menyakiti diri sendiri"
+];
+const options = ["Tidak pernah", "Beberapa hari", "Lebih dari separuh waktu", "Hampir setiap hari"];
+let answers = {};
+
+
+const container = document.getElementById('questions-container');
+questions.forEach((q, idx) => {
+	const div = document.createElement('div');
+	div.className = "question-block p-4 mb-10 rounded-xl border border-slate-100";
+	div.id = `block-${idx}`;
+		div.innerHTML = `
+    <p class="pertanyaan-flex text-2xl md:text-5xl font-semibold text-[#107fe1] mb-4 leading-none"><span class="nomor-pertanyaan"><span>${idx + 1}</span></span><span>${q}</span></p>
+    <div class="choice-grid">
+        ${options.map((opt, val) => `
+            <button type="button" 
+                onclick="selectOption(${idx}, ${val})" 
+                id="btn-${idx}-${val}" 
+                class="btn-answer q-btn-${idx} border-2 border-slate-200 py-3 px-2 rounded-md text-[0.8em] md:text-[1em] text-slate-600 font-semibold uppercase leading-none bg-white hover:bg-gray-100 outline-none cursor-pointer transition-all">
+                ${opt}
+            </button>
+        `).join('')}
+    </div>
+`;
+	container.appendChild(div);
+});
+
+function selectOption(qIdx, val) {
+	document.querySelectorAll(`.q-btn-${qIdx}`).forEach(b => b.classList.remove('selected'));
+	document.getElementById(`btn-${qIdx}-${val}`).classList.add('selected');
+	answers[qIdx] = val;
+	document.getElementById(`block-${qIdx}`).classList.remove('highlight-error');
+}
+
+async function cekKelengkapan() {
+	let firstMissing = null;
+	for (let i = 0; i < questions.length; i++) {
+		if (answers[i] === undefined) {
+			const block = document.getElementById(`block-${i}`);
+			block.classList.add('highlight-error');
+			if (firstMissing === null) firstMissing = block;
+		}
+	}
+
+	if (firstMissing) {
+		await Swal.fire({
+			title: 'Data Belum Lengkap',
+			text: 'Silakan lengkapi pertanyaan yang ditandai merah.',
+			icon: 'warning',
+			confirmButtonColor: '#2563eb',
+			returnFocus: false
+		});
+		firstMissing.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		return false;
+	}
+	return true;
+}
+
+async function processResult() {
+	if (!(await cekKelengkapan())) return;
+	const total = Object.values(answers).reduce((a, b) => a + b, 0);
+
+	document.getElementById('result-score').innerText = `${total}`;
+	const box = document.getElementById('result-box');
+	const inter = document.getElementById('result-category');
+	const reco = document.getElementById('result-recommendation');
+	
+	const tglSekarang = new Date().toLocaleString('id-ID');
+	document.getElementById('result-date').innerText = tglIndonesiaFormat(tglSekarang);
+
+	if (total <= 4) { inter.innerText = "Minimal"; reco.innerText = "Tidak perlu tindakan klinis khusus."; }
+	else if (total <= 9) { inter.innerText = "Ringan"; reco.innerText = "Perlu pemantauan dan edukasi kesehatan mental."; }
+	else if (total <= 14) { inter.innerText = "Sedang"; reco.innerText = "Disarankan untuk konsultasi atau konseling."; }
+	else if (total <= 19) { inter.innerText = "Agak Berat"; reco.innerText = "Sangat disarankan psikoterapi atau evaluasi medis."; }
+	else { inter.innerText = "Berat"; reco.innerText = "Segera hubungi profesional psikiater."; }
+
+	box.classList.remove('hidden');
+	box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+async function takeScreenshot() {
+	
+	if (!(await cekKelengkapan())) return;
+	
+	Swal.fire({ title: 'Memproses...', didOpen: () => Swal.showLoading() });
+
+	document.getElementById('ghost').style.display = "block"; // penambah space bawah
+	const targets = document.querySelectorAll('.screenshot-target');
+	targets.forEach(el => el.classList.add('hide-for-screenshot')); // SEMBUNYIKAN SEMUA TOMBOL
+
+	const el = document.getElementById('capture-area');
+
+    // Modern-screenshot menggunakan teknik SVG ForeignObject jauh lebih cepat dan akurat dibanding html2canvas
+    try {
+
+		const dataUrl = await modernScreenshot.domToPng(el, {
+            quality: 1,
+            scale: 2, // Membuat hasil lebih tajam (High DPI)
+        });
+        const link = document.createElement('a');
+		link.download = `Skrining_GAD17_${Date.now()}.png`;
+		link.href = dataUrl;
+		link.click();
+		
+    } catch (err) {
+        console.error('Ups..', err);
+    }
+	
+	document.getElementById('ghost').style.display = "none";
+	targets.forEach(el => el.classList.remove('hide-for-screenshot')); // TAMPILKAN KEMBALI TOMBOL SETELAH SELESAI
+	
+	Swal.close();
+}
+
+function shareWA() {
+	const text = encodeURIComponent("Skrining Online Mengukur Tingkat Depresi Dengan PHQ-9 RSUD Cibabat:\n\n" + window.location.href);
+	window.open(`https://wa.me/?text=${text}`, '_blank');
+}
+
+function resetSurvey() {
+	Swal.fire({
+		title: 'Mulai Ulang Skrining?',
+		text: "Seluruh jawaban akan dikosongkan.",
+		icon: 'question',
+		showCancelButton: true,
+		confirmButtonColor: '#2563eb',
+		confirmButtonText: 'Reset',
+		cancelButtonText: 'Batal',
+		returnFocus: false
+	}).then((result) => {
+		if (result.isConfirmed) {
+			answers = {};
+			document.querySelectorAll('.btn-answer').forEach(btn => btn.classList.remove('selected'));
+			document.querySelectorAll('.question-block').forEach(b => b.classList.remove('highlight-error'));
+			document.getElementById('result-box').classList.add('hidden');
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		}
+	});
+}
+
+const tglIndonesiaFormat = (tanggal) => {
+
+	let d;
+
+	if (tanggal instanceof Date && !isNaN(tanggal)) {
+		d = tanggal;
+	} else if (typeof tanggal === 'string') {
+		// Memisahkan "07/01/2026, 10.08.26"
+		const [tglPart, jamPart] = tanggal.split(', ');
+		const [hari, bulan, tahun] = tglPart.split('/');
+		const [jam, menit, detik] = jamPart ? jamPart.split('.') : [0, 0, 0];
+
+		d = new Date(tahun, bulan - 1, hari, jam, menit, detik);
+	}
+
+	if (!d || isNaN(d.getTime())) return "Format Tidak Valid";
+
+	// Array nama hari dan bulan dalam Bahasa Indonesia
+	const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+	const namaBulan = [
+		"Januari", "Februari", "Maret", "April", "Mei", "Juni",
+		"Juli", "Agustus", "September", "Oktober", "November", "Desember"
+	];
+
+	// Ambil komponen tanggal
+	const hariNama = namaHari[d.getDay()];
+	const tanggalTgl = d.getDate();
+	const bulanNama = namaBulan[d.getMonth()];
+	const tahunFull = d.getFullYear();
+  
+	// Format jam dan menit agar selalu 2 digit (misal: 08.05)
+	const jamFull = String(d.getHours()).padStart(2, '0');
+	const menitFull = String(d.getMinutes()).padStart(2, '0');
+	const detikFull = String(d.getSeconds()).padStart(2, '0');
+
+	// Susun hasil akhir: "Rabu, 7 Januari 2026 10:08 WIB"
+	return `${hariNama}, ${tanggalTgl} ${bulanNama} ${tahunFull} ${jamFull}:${menitFull}:${detikFull} WIB`;
+
+};
+</script>
+<script src="../js/back_home.js"></script> <!-- balikKandang(); -->
+</body>
+</html>

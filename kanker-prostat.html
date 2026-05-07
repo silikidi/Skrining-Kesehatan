@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id-id" style="--document-width: 100vw;--document-height: 100vh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sukma Budi with Gemini">
+<meta name="description" content="Sering buang air kecil atau aliran urin lemah? Lakukan skrining online gejala prostat dengan IPSS online di RSUD Cibabat. Praktis, mandiri, dan membantu konsultasi dokter. ">
+<meta property="og:title" content="RSUD Cibabat - Skrining Gejala Prostat Dengan IPSS">
+<meta property="og:description" content="Sering buang air kecil atau aliran urin lemah? Lakukan skrining online gejala prostat dengan IPSS online di RSUD Cibabat. Praktis, mandiri, dan membantu konsultasi dokter. ">
+<meta property="og:image" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta property="og:url" content="https://rsudcibabat.cimahikota.go.id/skrining/kanker-prostat.html">
+<meta property="og:site_name" content="RSUD Cibabat Official Website">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RSUD Cibabat - Skrining Gejala Prostat Dengan IPSS">
+<meta name="twitter:description" content="Sering buang air kecil atau aliran urin lemah? Lakukan skrining online gejala prostat dengan IPSS online di RSUD Cibabat. Praktis, mandiri, dan membantu konsultasi dokter. ">
+<meta property="twitter:image:src" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta name="twitter:url" content="https://rsudcibabat.cimahikota.go.id/skrining/kanker-prostat.html">
+<meta name="twitter:site" content="@rscibabat">
+
+<title>RSUD Cibabat - Skrining Gejala Prostat Dengan IPSS</title>
+
+<link rel="apple-touch-icon" href="../images/logo/rsclogo.png">
+<link rel="icon" type="image/svg+xml" href="../images/logo/rsclogo.webp">
+<link rel="canonical" href="https://rsudcibabat.cimahikota.go.id/skrining/kanker-prostat.html">
+<link href="./dist/tailwind.css" rel="stylesheet">
+<link href="../css/sweetalert2.min.css" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "RSUD Cibabat - Skrining Gejala Prostat Dengan IPSS",
+	"description": "Sering buang air kecil atau aliran urin lemah? Lakukan skrining online gejala prostat dengan IPSS online di RSUD Cibabat. Praktis, mandiri, dan membantu konsultasi dokter. " ,
+	"image": [
+		"../images/logo/rsudcibabatwebmin.jpg"
+	]
+}
+</script>
+<script src="../js/sweetalert2.all.min.js"></script>
+<script src="../js/modern-screenshot4.6.8.min.js"></script>
+
+<style>
+.bg-image {
+	background-image: url('../images/wallpaper/gradien1-minr.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+.highlight-error { 
+	border: 2px solid #ef4444 !important; 
+	background-color: #fef2f2; 
+	scroll-margin-top: 120px;
+}
+.radio-box {
+	transition: all 0.2s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	min-height: 54px;
+}
+
+/* ========== VERTICAL BRAND ========== */
+.vertical-tag {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	pointer-events: none;
+}
+.vertical-tag span {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	white-space: nowrap;
+}
+/* ========== VERTICAL BRAND ========== */
+</style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+<div class="relative max-w-4xl mx-auto py-10 px-4">
+
+	<div id="capture-area" class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+
+		<header class="px-6 md:px-6 py-6 md:py-6">
+			<small class="text-sm leading-none">Instrumen IPSS</small>
+			<h1 class="text-2xl text-slate-800 font-black leading-none">Skrining Gejala Prostat</h1>
+			<p class="text-sm md:text-md text-slate-700 font-semibold uppercase leading-none mt-2">Skrining Mandiri RSUD Cibabat</p>
+		</header>
+
+		<div class="p-6 md:p-6 mb-6 border-l-6 bg-[#f2f2f2] border-l-[5px] border-solid border-[#e1e1e1]">
+			<p class="text-sm font-bold mb-2">DISCLAIMER</p>
+			<p class="text-sm leading-tight mb-2">
+				<a href="../kebijakan-privasi.html" target="_blank">Privasi Anda dijamin UU PDP 27 2022</a> proses skrining sepenuhnya berjalan di browser client dan tidak ada data yang dikirim ataupun disimpan di server manapun.
+				Skrining ini bertujuan untuk mengukur tingkat keparahan gejala kemih (LUTS) dan bukan merupakan diagnosa kanker prostat. Angka skor yang dihasilkan harus dikonsultasikan lebih lanjut dengan <a href="#panel-klinik">Dokter Ahli RSUD Cibabat</a>.
+				Skrining mengacu pada riset Barry MJ, et al. (1992). 
+				<a href="https://doi.org/10.1016/s0022-5347(17)36966-5" target="_blank" rel="noopener noreferrer">The American Urological Association symptom index for benign prostatic hyperplasia.</a>
+			</p>
+		</div>
+
+		<form id="ipssForm" onsubmit="return false;">
+			<div id="questions-wrapper"></div>
+
+			<div id="result-display" class="hidden p-8 mx-4 rounded-xl border-2 border-blue-200 bg-blue-50 text-center">
+				<h2 class="text-gray-600 font-semibold text-sm uppercase leading-none tracking-widest">Skor Anda</h2>
+				<div id="total-score" class="my-3 text-7xl font-black text-blue-900">0</div>
+				<div id="category-badge"></div>
+				<p id="interpretation" class="text-gray-700 leading-relaxed font-medium leading-tight"></p>
+			</div>
+		</form>
+
+		<div id="ghost" class="w-full h-[50px] m-0 p-0 hidden"></div>
+
+	</div>
+
+	<div class="mt-10 mb-10 flex flex-col flex-wrap justify-center gap-3 screenshot-target">
+		<button onclick="processResult()" class="px-2 md:px-8 py-5 text-[1.1em] md:text-[1.5em] bg-image font-bold uppercase leading-none border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Hitung</button>
+		<div class="grid grid-cols-2 gap-2">
+			<button onclick="takeScreenshot()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Screenshot</button>
+			<button onclick="shareWA()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Bagikan</button>
+		</div>
+		<div class="grid grid-cols-2 gap-2">
+			<button onclick="resetSurvey()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Reset</button>
+			<button onclick="balikKandang()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Kembali</button>
+		</div>
+	</div>
+
+	<div id="panel-klinik" class="space-y-4 px-8 rounded-2xl bg-image shadow-2xl screenshot-target">
+		<div class="text-[3em] text-black text-center font-black leading-none pt-10">
+			Tenang.. dan Jangan Panik
+		</div>
+		<div class="text-[1.2em] md:text-[1.7em] font-semibold text-black text-center leading-tight py-4">
+			Dapatkan penanganan prostat profesional berdasarkan skor Anda bersama Dokter Ahli RSUD Cibabat
+		</div>
+		<div class="text-[1.5em] md:text-[2.5em] text-black text-center font-black leading-none">
+			Konsultasi Dokter Ahli
+		</div>
+		<div class="grid grid-cols-2 gap-2 pb-20">
+			<button class="px-2 py-4 text-[16px] md:text-[18px] font-bold uppercase leading-none bg-white hover:bg-gray-300 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Janji Temu</button>
+			<button class="px-2 py-4 text-[16px] md:text-[18px] font-bold uppercase leading-none bg-white hover:bg-gray-300 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Profil Layanan</button>
+		</div>
+	</div>
+
+	<!-- VERTICAL BRAND -->
+	<div class="absolute vertical-tag left right-[97%] md:right-[100%] p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+
+	<div class="absolute vertical-tag right left-[97%] md:left-[100%] rotate-180 p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+	<!-- VERTICAL BRAND -->
+
+</div>
+
+<script>
+const optionLabels = ["Tidak Pernah", "1 dari 5 kali", "Kurang dari setengah", "Setengah waktu", "Lebih dari setengah", "Hampir selalu"];
+const questions = [
+	{ id: 1, text: "Pengosongan Kurang Sempurna", sub: "Merasa kandung kemih belum sepenuhnya kosong setelah kencing" },
+	{ id: 2, text: "Frekuensi", sub: "Kencing lagi kurang dari 2 jam setelah kencing terakhir" },
+	{ id: 3, text: "Intermitensi", sub: "Aliran kencing berhenti dan mulai lagi beberapa kali saat kencing" },
+	{ id: 4, text: "Urgensi", sub: "Merasa sulit atau tidak bisa menahan kencing" },
+	{ id: 5, text: "Pancaran Lemah", sub: "Pancaran kencing terasa lemah atau mengecil" },
+	{ id: 6, text: "Mengejan", sub: "Harus mengejan untuk memulai kencing" },
+	{ id: 7, text: "Nokturia", sub: "Berapa kali biasanya Anda bangun untuk kencing di malam hari", customOpt: ["Tidak pernah", "1 kali", "2 kali", "3 kali", "4 kali", "5 kali atau lebih"] }
+];
+
+const wrapper = document.getElementById('questions-wrapper');
+questions.forEach(q => {
+	const labels = q.customOpt || optionLabels;
+	wrapper.innerHTML += `
+		<div id="block-q${q.id}" class="question-item p-4 md:p-8 mb-6 bg-gray-50 rounded-2xl border border-gray-100 transition-all duration-300">
+			<label class="block mb-5">
+				<div class="mb-2 text-blue-900 font-extrabold text-2xl md:text-4xl leading-tight flex flex-row justify-start items-start gap-[20px]">
+					<div class="w-[10px] md:w-[30px] text-center leading-none">${q.id}</div><div class="leading-none">${q.text}</div>
+				</div>
+				<div class="ml-[30px] md:ml-[50px] block md:text-2xl font-medium">${q.sub}</div>
+			</label>
+			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+				${labels.map((label, v) => `
+					<label class="group cursor-pointer">
+						<input type="radio" name="q${q.id}" value="${v}" 
+							onchange="clearHighlight(${q.id})" 
+							class="hidden peer" required>
+						<div class="radio-box p-3 rounded-xl border-2 border-gray-200 bg-white text-[18px] text-gray-500 font-semibold leading-none 
+							peer-checked:bg-blue-900 peer-checked:text-white peer-checked:border-none peer-checked:text-[21px] 
+							group-hover:bg-blue-50 group-hover:border-blue-600 transition-all">
+							${label}
+						</div>
+					</label>
+				`).join('')}
+			</div>
+		</div>
+	`;
+});
+
+// Fitur Baru: Hapus highlight saat input dipilih
+function clearHighlight(id) {
+	const block = document.getElementById(`block-q${id}`);
+	if (block) {
+		block.classList.remove('highlight-error');
+	}
+}
+
+async function validate() {
+	let firstMissingBlock = null;
+	questions.forEach(q => {
+		const checked = document.querySelector(`input[name="q${q.id}"]:checked`);
+		const block = document.getElementById(`block-q${q.id}`);
+		if (!checked) {
+			block.classList.add('highlight-error');
+			if (!firstMissingBlock) firstMissingBlock = block;
+		}
+	});
+
+	if (firstMissingBlock) {
+		await Swal.fire({
+			icon: 'warning',
+			title: 'Belum Selesai',
+			text: 'Mohon jawab semua pertanyaan yang ditandai merah.',
+			confirmButtonColor: '#1e3a8a',
+			returnFocus: false 
+		});
+		firstMissingBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		return false;
+	}
+	return true;
+}
+
+async function processResult() {
+	if (!(await validate())) return;
+
+	let score = 0;
+	new FormData(document.getElementById('ipssForm')).forEach(val => score += parseInt(val));
+
+	const display = document.getElementById('result-display');
+	const badge = document.getElementById('category-badge');
+	const interpretation = document.getElementById('interpretation');
+
+	display.classList.remove('hidden');
+	document.getElementById('ghost').classList.remove('hidden');
+	document.getElementById('total-score').innerText = score;
+
+	if (score <= 7) {
+		badge.innerText = "GEJALA RINGAN";
+		badge.className = "mb-4 px-6 py-1.5 inline-block rounded-full text-xl md:text-4xl text-white font-bold bg-green-500";
+		interpretation.innerText = "Skor Anda menunjukkan gejala yang ringan. Tetap pantau kesehatan Anda.";
+	} else if (score <= 19) {
+		badge.innerText = "GEJALA SEDANG";
+		badge.className = "mb-4 px-6 py-1.5 inline-block rounded-full text-xl md:text-4xl text-white font-bold bg-yellow-500";
+		interpretation.innerText = "Gejala sedang terdeteksi. Disarankan konsultasi dengan Dokter Spesialis Urologi.";
+	} else {
+		badge.innerText = "GEJALA BERAT";
+		badge.className = "mb-4 px-6 py-1.5 inline-block rounded-full text-xl md:text-4xl text-white font-bold bg-red-600";
+		interpretation.innerText = "Gejala berat terdeteksi. Segera jadwalkan konsultasi medis untuk penanganan tepat.";
+	}
+	display.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+async function takeScreenshot() {
+	if (!(await validate())) return;
+	Swal.fire({ title: 'Menyiapkan Gambar...', allowOutsideClick: false, didOpen: () => Swal.showLoading() });
+	modernScreenshot.domToPng(document.getElementById('capture-area'), { scale: 2 }).then(dataUrl => {
+		const link = document.createElement('a');
+		link.download = `Skrining-IPSS-${Date.now()}.png`;
+		link.href = dataUrl;
+		link.click();
+		Swal.close();
+	});
+}
+
+function resetSurvey() {
+	document.getElementById('ipssForm').reset();
+	document.getElementById('result-display').classList.add('hidden');
+	document.getElementById('ghost').classList.add('hidden');
+	document.querySelectorAll('.question-item').forEach(el => el.classList.remove('highlight-error'));
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function shareWA() {
+	const text = encodeURIComponent(`Cek skor IPSS Prostat mandiri di sini: ${window.location.href}`);
+	window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+}
+
+
+
+const tglIndonesiaFormat = (tanggal) => {
+
+	let d;
+
+	if (tanggal instanceof Date && !isNaN(tanggal)) {
+		d = tanggal;
+	} else if (typeof tanggal === 'string') {
+		// Memisahkan "07/01/2026, 10.08.26"
+		const [tglPart, jamPart] = tanggal.split(', ');
+		const [hari, bulan, tahun] = tglPart.split('/');
+		const [jam, menit, detik] = jamPart ? jamPart.split('.') : [0, 0, 0];
+
+		d = new Date(tahun, bulan - 1, hari, jam, menit, detik);
+	}
+
+	if (!d || isNaN(d.getTime())) return "Format Tidak Valid";
+
+	// Array nama hari dan bulan dalam Bahasa Indonesia
+	const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+	const namaBulan = [
+		"Januari", "Februari", "Maret", "April", "Mei", "Juni",
+		"Juli", "Agustus", "September", "Oktober", "November", "Desember"
+	];
+
+	// Ambil komponen tanggal
+	const hariNama = namaHari[d.getDay()];
+	const tanggalTgl = d.getDate();
+	const bulanNama = namaBulan[d.getMonth()];
+	const tahunFull = d.getFullYear();
+  
+	// Format jam dan menit agar selalu 2 digit (misal: 08.05)
+	const jamFull = String(d.getHours()).padStart(2, '0');
+	const menitFull = String(d.getMinutes()).padStart(2, '0');
+	const detikFull = String(d.getSeconds()).padStart(2, '0');
+
+	// Susun hasil akhir: "Rabu, 7 Januari 2026 10:08 WIB"
+	return `${hariNama}, ${tanggalTgl} ${bulanNama} ${tahunFull} ${jamFull}:${menitFull}:${detikFull} WIB`;
+
+};
+</script>
+<script src="../js/back_home.js"></script> <!-- balikKandang(); -->
+</body>
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="id-id" style="--document-width: 100vw;--document-height: 100vh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sukma Budi with Gemini">
+<meta name="description" content="Lakukan skrining kesehatan mental mandiri secara cepat di RSUD Cibabat menggunakan metode DASS-21. Cek tingkat stres, kecemasan, dan depresi Anda secara online dan akurat.">
+<meta property="og:title" content="RSUD Cibabat - Skrining DASS-21 Tingkat Stres Kecemasan dan Depresi">
+<meta property="og:description" content="Lakukan skrining kesehatan mental mandiri secara cepat di RSUD Cibabat menggunakan metode DASS-21. Cek tingkat stres, kecemasan, dan depresi Anda secara online dan akurat.">
+<meta property="og:image" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta property="og:url" content="https://rsudcibabat.cimahikota.go.id/skrining/dass21.html">
+<meta property="og:site_name" content="RSUD Cibabat Official Website">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RSUD Cibabat - Skrining DASS-21 Tingkat Stres Kecemasan dan Depresi">
+<meta name="twitter:description" content="Lakukan skrining kesehatan mental mandiri secara cepat di RSUD Cibabat menggunakan metode DASS-21. Cek tingkat stres, kecemasan, dan depresi Anda secara online dan akurat.">
+<meta property="twitter:image:src" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta name="twitter:url" content="https://rsudcibabat.cimahikota.go.id/skrining/dass21.html">
+<meta name="twitter:site" content="@rscibabat">
+
+<title>RSUD Cibabat - Skrining DASS-21 Tingkat Stres Kecemasan dan Depresi</title>
+
+<link rel="apple-touch-icon" href="../images/logo/rsclogo.png">
+<link rel="icon" type="image/svg+xml" href="../images/logo/rsclogo.webp">
+<link rel="canonical" href="https://rsudcibabat.cimahikota.go.id/skrining/dass21.html">
+<link href="./dist/tailwind.css" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "RSUD Cibabat - Skrining DASS-21 Tingkat Stres Kecemasan dan Depresi",
+	"description": "Lakukan skrining kesehatan mental mandiri secara cepat di RSUD Cibabat menggunakan metode DASS-21. Cek tingkat stres, kecemasan, dan depresi Anda secara online dan akurat." ,
+	"image": [
+		"../images/logo/rsudcibabatwebmin.jpg"
+	]
+}
+</script>
+<script src="../js/sweetalert2.all.min.js"></script>
+<script src="../js/html2canvas141.min.js"></script>
+
+<style>
+body {
+
+	/*KETAJAMAN FONT*/
+	text-shadow: 0 0 1px rgba(0,0,0,0.01);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+	font-family: 'Google Sans Flex', sans-serif !important;
+	
+	background-color: #f8fafc;
+	overflow-x: hidden;
+}
+
+.bg-image {
+	background-image: url('../images/wallpaper/gradien1-minr.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+
+#capture-area {
+    width: 100%;
+    background-color: white;
+}
+#capture-area table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Biarkan browser mengatur lebar kolom secara cerdas */
+	box-sizing: border-box;
+}
+#capture-area th, 
+#capture-area td {
+    vertical-align: middle !important;
+    line-height: 1.2 !important;
+    padding-top: 12px !important;    /* Menambah padding atas */
+    padding-bottom: 12px !important; /* Menambah padding bawah yang seimbang */
+}
+
+#score-cards {
+	box-sizing: border-box;
+}
+
+.selected-option { 
+	border-color: #4f46e5 !important; 
+	background-color: #eef2ff !important; 
+	box-shadow: 0 0 0 1px #4f46e5 inset;
+}
+
+/* Animasi Transisi */
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateX(20px); }
+	to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeOut {
+	from { opacity: 1; transform: translateX(0); }
+	to { opacity: 0; transform: translateX(-20px); }
+}
+.fade-in { animation: fadeIn 0.2s ease-out forwards; }
+.fade-out { animation: fadeOut 0.2s ease-in forwards; }
+
+/* Animasi Masuk dari Kiri (Back) */
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+.fade-in-left { animation: fadeInLeft 0.2s ease-out forwards; }
+/* Animasi Keluar ke Kanan (Back) */
+@keyframes fadeOutRight {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(20px); }
+}
+.fade-out-right { animation: fadeOutRight 0.2s ease-in forwards; }
+
+.option-btn { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+.option-btn:active { transform: scale(0.97); }
+
+@media print { .no-print { display: none !important; } }
+
+/* ========== VERTICAL BRAND ========== */
+.vertical-tag {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	pointer-events: none;
+}
+.vertical-tag span {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	white-space: nowrap;
+}
+/* ========== VERTICAL BRAND ========== */
+</style>
+<link href="./dist/tailwind.css" rel="stylesheet">
+</head>
+<body class="py-6 px-4">
+
+<div id="main-container" class="relative max-w-3xl mx-auto bg-white rounded-md shadow-2xl overflow-hidden mb-8">
+
+	<div class="p-8 bg-white border-b border-slate-50 no-print">
+		<div class="flex justify-between items-center">
+			<div>
+				<small class="text-sm font-bold text-slate-500">Instrumen DASS-21</small>
+				<h1 class="text-2xl font-extrabold text-slate-900 leading-none tracking-tight mb-1">Cek Tingkat Stres Kecemasan dan Depresi</h1>
+				<p class="text-indigo-600 font-bold text-xs uppercase leading-none tracking-widest">Skrining Mandiri RSUD Cibabat</p>
+			</div>
+		</div>
+		<div class="mt-8 w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+			<div id="progress" class="bg-indigo-600 h-full transition-all duration-500" style="width: 0%"></div>
+		</div>
+	</div>
+
+	<div id="quiz-screen" class="p-8 md:p-12 no-print">
+		<div id="question-area">
+			<div class="flex justify-between items-center mb-1">
+				<span id="q-number" class="text-sm font-black text-indigo-400 uppercase tracking-[0.2em]">Pertanyaan 1</span>
+				<button id="prev-btn" onclick="prevQuestion()" class="flex items-center gap-1 text-sm font-black text-red-400 uppercase hover:text-slate-600 cursor-pointer">
+					◄ Kembali
+				</button>
+			</div>
+                
+			<h2 id="q-text" class="text-2xl md:text-3xl font-bold text-slate-800 leading-tight mb-2 min-h-[80px]">...</h2>
+                
+			<div id="options-container" class="grid grid-cols-1 gap-3">
+			</div>
+		</div>
+	</div>
+
+	<div id="result-screen" class="hidden p-4 md:px-8">
+		<div id="capture-area" class="bg-white p-4 rounded-md border border-slate-50">
+			<div class="flex justify-between items-start pb-4 mb-4">
+				<div>
+					<small id="current-date" class="text-xs font-bold text-slate-500 leading-none"></small>
+					<h2 class="text-xl font-black text-slate-900 mb-2 leading-none">Tingkat Stres Kecemasan dan Depresi</h2>
+					<p class="text-xs text-slate-500 font-bold uppercase leading-none">Skrining Mandiri RSUD Cibabat</p>
+				</div>
+				<!--
+				<div class="text-[10px] text-right text-slate-400 font-medium">
+					Waktu: <span id="current-date"></span>
+				</div>
+				-->
+			</div>
+
+			<div id="score-cards" class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8"></div>
+
+			<div class="mb-6">
+				<!--
+				<h3 class="font-black text-slate-800 text-[10px] uppercase tracking-widest mb-3 border-l-4 border-indigo-600 pl-2">Detail Jawaban Medis:</h3>
+				-->
+				<div class="border border-gray-300 rounded-md overflow-hidden">
+					<table class="w-full text-[10px] md:text-xs border-collapse">
+						<thead class="bg-slate-50 border-b border-gray-300">
+							<tr>
+								<th class="align-middle text-center w-6 border-r border-gray-300 p-2">No</th>
+								<th class="align-middle text-left border-r border-gray-300 p-2">Gejala</th>
+								<th class="align-middle text-center border-r border-gray-300 p-2">Jawaban</th>
+								<th class="align-middle text-center w-8 p-2">Skor</th>
+							</tr>
+						</thead>
+						<tbody id="full-details-body" class="divide-y"></tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="mt-6 overflow-hidden rounded-md border border-amber-200 bg-amber-50">
+				<div class="bg-amber-100 px-4 py-2 border-b border-amber-200 flex items-center gap-2">
+					<svg class="w-4 h-4 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+					</svg>
+					<span class="text-[10px] font-black text-amber-800 uppercase tracking-widest">Disclaimer</span>
+				</div>
+				<div class="p-4">
+					<p class="text-[11px] md:text-xs text-amber-900 leading-tight font-medium mb-2">
+						<a href="../kebijakan-privasi.html" target="_blank">Privasi Anda dijamin UU PDP 27 2022</a> proses skrining sepenuhnya berjalan di browser client dan tidak ada data yang dikirim ataupun disimpan di server manapun.
+						Instrumen skrining DASS-21 mengacu pada jurnal riset <a href="https://doi.org/10.1016/0005-7967(94)00075-U" target="_blank" rel="noopener noreferrer" class="text-red-900 font-black no-underline hover:underline">Lovibond : <span class="italic">Depression Anxiety Stress Scales</span></a>.
+					</p>
+					<p class="text-[11px] md:text-xs text-amber-900 leading-tight font-medium">
+						Diagnosis resmi tetap memerlukan pemeriksaan tatap muka dengan tenaga profesional kesehatan jiwa.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="space-y-4 no-print px-4 pb-4">
+			
+			<div class="grid grid-cols-2 gap-2">
+				<button onclick="takeScreenshot()" class="p-2 bg-white border border-gray-300 rounded-md text-center font-bold text-sm hover:bg-slate-100 cursor-pointer">Screenshot</button>
+				<button onclick="shareToWA()" class="p-2 bg-white border border-gray-300 rounded-md text-center font-bold text-sm hover:bg-slate-100 cursor-pointer">Bagikan</button>
+			</div>
+			
+			<div class="grid grid-cols-2 gap-2">
+				<button onclick="resetAll()" class="p-2 bg-white border border-gray-300 rounded-md text-center font-bold text-sm hover:bg-slate-100 cursor-pointer">Ulangi Tes</button>
+				<button onclick="balikKandang()" class="p-2 bg-white border border-gray-300 rounded-md text-center font-bold text-sm hover:bg-slate-100 cursor-pointer">Kembali</button>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="klinik-jiwa" class="hidden space-y-4 no-print px-8 rounded-md bg-image">
+		<div class="text-[3em] text-black text-center font-black leading-none pt-10">
+			Tenang.. dan Jangan Panik
+		</div>
+		<div class="text-[1.2em] md:text-[1.7em] font-semibold text-black text-center leading-tight py-4">
+			Rumah kedua hati untuk melangkah lebih baik bersama Dokter Spesialis Jiwa kami
+		</div>
+		<div class="text-[1.5em] md:text-[2.5em] text-black text-center font-black leading-none">
+			Konsultasi Dokter Ahli
+		</div>
+		<div class="grid grid-cols-2 gap-2 pb-20">
+			<button class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Janji Temu</button>
+			<button class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Profil Layanan</button>
+		</div>
+	</div>
+
+	<!-- VERTICAL BRAND -->
+	<div class="absolute vertical-tag left right-[97%] md:right-[100%] p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+
+	<div class="absolute vertical-tag right left-[97%] md:left-[100%] rotate-180 p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+	<!-- VERTICAL BRAND -->
+	
+</div>
+
+<script>
+const questions = [
+	"Saya merasa sulit untuk beristirahat.", "Saya menyadari mulut saya terasa kering.", "Saya sepertinya tidak dapat merasakan perasaan positif sama sekali.",
+	"Saya mengalami kesulitan bernapas (misal: napas sangat cepat).", "Saya merasa sulit untuk berinisiatif melakukan sesuatu.", "Saya cenderung bereaksi berlebihan terhadap situasi.",
+	"Saya merasa gemetar (misalnya, pada tangan).", "Saya merasa menggunakan banyak energi karena merasa cemas.", "Saya khawatir dengan situasi di mana saya mungkin menjadi panik dan mempermalukan diri sendiri.",
+	"Saya merasa tidak ada hal baik yang dapat diharapkan di masa depan.", "Saya merasa diri saya mudah gelisah.", "Saya merasa sulit untuk bersantai.",
+	"Saya merasa sedih dan tertekan.", "Saya tidak toleran terhadap hal-hal yang menghalangi saya melakukan apa yang sedang saya lakukan.", "Saya merasa hampir panik.",
+	"Saya tidak merasa antusias terhadap apa pun.", "Saya merasa bahwa saya tidak berharga sebagai seorang manusia.", "Saya merasa bahwa saya cukup mudah tersinggung.",
+	"Saya menyadari kegiatan jantung saya padahal tidak sedang beraktivitas fisik.", "Saya merasa takut tanpa alasan yang jelas.", "Saya merasa hidup tidak berarti."
+];
+
+const optionLabels = ["Tidak Pernah", "Kadang-kadang", "Sering", "Hampir Setiap Saat"];
+let currentIdx = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let isProcessing = false;
+
+function renderQuestion() {
+	document.getElementById('q-number').innerText = `PERTANYAAN ${currentIdx + 1}`;
+	document.getElementById('q-text').innerText = questions[currentIdx];
+	document.getElementById('progress').style.width = `${((currentIdx + 1) / questions.length) * 100}%`;
+	//document.getElementById('prev-btn').style.visibility = currentIdx > 0 ? 'visible' : 'hidden';
+
+	const container = document.getElementById('options-container');
+	container.innerHTML = '';
+            
+	optionLabels.forEach((label, index) => {
+		const isSelected = userAnswers[currentIdx] === index;
+		const btn = document.createElement('button');
+		btn.className = `option-btn cursor-pointer flex justify-between items-center p-5 rounded-md border-2 ${isSelected ? 'selected-option border-indigo-600 bg-indigo-50' : 'border-slate-100 hover:border-indigo-200'}`;
+		btn.innerHTML = `
+			<span class="text-slate-700 font-bold text-sm md:text-base">${label}</span>
+			<div class="w-6 h-6 rounded-full border-2 ${isSelected ? 'bg-indigo-600 border-indigo-600' : 'border-slate-200'} flex items-center justify-center">
+				${isSelected ? '<svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>' : ''}
+			</div>
+		`;
+		btn.onclick = () => handleAnswer(index);
+		container.appendChild(btn);
+	});
+}
+
+function handleAnswer(score) {
+	if (isProcessing) return;
+	isProcessing = true;
+
+	userAnswers[currentIdx] = score;
+	renderQuestion();
+
+	const quizArea = document.getElementById('question-area');
+
+	// DELAY 1: Memberi waktu user melihat pilihan warna biru sebelum mulai hilang
+	setTimeout(() => {
+		if (currentIdx < questions.length - 1) {
+			quizArea.classList.add('fade-out');
+
+			// DELAY 2: Menunggu animasi fade-out selesai sebelum mengganti teks soal
+			setTimeout(() => {
+				currentIdx++;
+				renderQuestion();
+				quizArea.classList.remove('fade-out');
+				quizArea.classList.add('fade-in');
+
+				// DELAY 3: Membersihkan class agar animasi bisa dipicu lagi nanti
+				setTimeout(() => {
+					quizArea.classList.remove('fade-in');
+					isProcessing = false;
+				}, 200); // Harus sama atau lebih besar dari durasi CSS fade-in
+			}, 200); // Harus sama dengan durasi CSS fade-out
+		} else {
+			if (userAnswers.every(ans => ans !== null)) {
+				showResults();
+			} else {
+				currentIdx = userAnswers.indexOf(null);
+				alert("Mohon lengkapi semua jawaban.");
+				renderQuestion();
+				isProcessing = false;
+			}
+		}
+	}, 100); // Delay awal setelah klik
+}
+
+function prevQuestion() {
+    if (isProcessing || currentIdx <= 0){
+		balikKandang();
+		//return;
+	}
+    isProcessing = true;
+
+    const quizArea = document.getElementById('question-area');
+
+    // 1. Tambahkan efek keluar ke arah kanan
+    quizArea.classList.add('fade-out-right');
+
+    setTimeout(() => {
+        currentIdx--;
+        renderQuestion();
+
+        // 2. Ganti animasi keluar dengan masuk dari arah kiri
+        quizArea.classList.remove('fade-out-right');
+        quizArea.classList.add('fade-in-left');
+
+        setTimeout(() => {
+            quizArea.classList.remove('fade-in-left');
+            isProcessing = false;
+        }, 400);
+    }, 300);
+}
+
+function getLevel(score, type) {
+	const final = score * 2;
+	const levels = {
+		dep: [[9, "Normal"], [13, "Ringan"], [20, "Sedang"], [27, "Parah"], [99, "Sangat Parah"]],
+		anx: [[7, "Normal"], [9, "Ringan"], [14, "Sedang"], [19, "Parah"], [99, "Sangat Parah"]],
+		str: [[14, "Normal"], [18, "Ringan"], [25, "Sedang"], [33, "Parah"], [99, "Sangat Parah"]]
+	};
+	for (let l of levels[type]) { if (final <= l[0]) return l[1]; }
+}
+
+function showResults() {
+	document.getElementById('quiz-screen').classList.add('hidden');
+	document.getElementById('result-screen').classList.remove('hidden');
+	document.getElementById('klinik-jiwa').classList.remove('hidden');
+
+	const tglSekarang = new Date().toLocaleString('id-ID');
+	document.getElementById('current-date').innerText = tglIndonesiaFormat(tglSekarang);
+
+	let d = 0, a = 0, s = 0;
+	let tableHtml = "";
+
+	userAnswers.forEach((val, i) => {
+		const safeVal = (val === null) ? 0 : val;
+		const qNum = i + 1;
+		if ([3, 5, 10, 13, 16, 17, 21].includes(qNum)) d += safeVal;
+		else if ([2, 4, 7, 9, 15, 19, 20].includes(qNum)) a += safeVal;
+		else s += safeVal;
+
+		tableHtml += `
+			<tr class="border-gray-300">
+				<td class="w-[40px] align-middle text-center text-slate-400 font-bold border-r border-gray-300 p-2">${qNum}</td>
+				<td class="align-middle text-slate-600 leading-tight border-r border-gray-300 p-2">${questions[i]}</td>
+				<td class="w-[150px] align-middle text-center text-indigo-700 font-medium border-r border-gray-300 p-2">${optionLabels[safeVal]}</td>
+				<td class="w-[60px] align-middle text-center text-slate-800 border-gray-300 font-bold p-2">${safeVal}</td>
+			</tr>`;
+	});
+
+	const cards = [
+		{ label: 'Depresi', val: getLevel(d, 'dep'), color: 'text-rose-600', bg: 'bg-rose-50' },
+		{ label: 'Kecemasan', val: getLevel(a, 'anx'), color: 'text-amber-600', bg: 'bg-amber-50' },
+		{ label: 'Stres', val: getLevel(s, 'str'), color: 'text-emerald-600', bg: 'bg-emerald-50' }
+	];
+
+	document.getElementById('score-cards').innerHTML = cards.map(c => `
+		<div class="${c.bg} p-4 rounded-md text-center flex flex-col items-center justify-center min-h">
+			<p class="text-[12px] font-black text-black-400 mb-1 tracking-widest uppercase">${c.label}</p>
+			<p class="text-2xl md:text-2xl font-black ${c.color}">${c.val}</p>
+		</div>
+	`).join('');
+
+	document.getElementById('full-details-body').innerHTML = tableHtml;
+}
+
+function takeScreenshot() {
+    const target = document.querySelector("#capture-area");
+    const btn = event.currentTarget;
+    const originalText = btn.innerHTML;
+    
+    btn.innerHTML = "Memproses HD Gambar...";
+    btn.disabled = true;
+
+    // Teknik onclone membuat salinan elemen di memori 
+    // agar bisa dimanipulasi tanpa merusak tampilan di layar HP user
+    html2canvas(target, {
+		scrollX: 0,
+		scrollY: 0,
+        scale: 2,             // Resolusi tinggi agar teks tajam saat di-zoom dokter
+        useCORS: true,
+        backgroundColor: "#ffffff",
+        // Menipu skrip agar merasa sedang merender di layar lebar 1000px
+        windowWidth: 1000,         
+        onclone: (clonedDoc) => {
+            const clonedTarget = clonedDoc.getElementById('capture-area');
+            
+            // PAKSA LEBAR: Agar tabel tidak tertekuk ke bawah (wrap)
+            clonedTarget.style.width = "900px"; 
+            clonedTarget.style.padding = "40px";
+            
+            // AUTO-CROP: Pastikan tidak ada scrollbar yang ikut terpotong
+            clonedTarget.style.height = "auto";
+            clonedTarget.style.overflow = "visible";
+
+            // Pastikan teks tabel tetap dalam satu baris (opsional)
+            const tableCells = clonedTarget.querySelectorAll('td');
+            tableCells.forEach(cell => {
+                cell.style.wordBreak = "normal";
+            });
+        }
+    }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = `Skrining-RSUD-Cibabat-${Date.now()}.png`;
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+        
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+    });
+}
+
+function shareToWA() {
+	const text = encodeURIComponent("Yuk cek kesehatan mental mandiri di RSUD Cibabat: " + window.location.href);
+	window.open(`https://wa.me/?text=${text}`);
+}
+
+function resetAll() {
+	currentIdx = 0;
+	userAnswers = new Array(questions.length).fill(null);
+	document.getElementById('result-screen').classList.add('hidden');
+	document.getElementById('quiz-screen').classList.remove('hidden');
+	document.getElementById('klinik-jiwa').classList.add('hidden');
+	isProcessing = false;
+	renderQuestion();
+}
+
+renderQuestion();
+
+
+
+const tglIndonesiaFormat = (tanggal) => {
+
+	let d;
+
+	if (tanggal instanceof Date && !isNaN(tanggal)) {
+		d = tanggal;
+	} else if (typeof tanggal === 'string') {
+		// Memisahkan "07/01/2026, 10.08.26"
+		const [tglPart, jamPart] = tanggal.split(', ');
+		const [hari, bulan, tahun] = tglPart.split('/');
+		const [jam, menit, detik] = jamPart ? jamPart.split('.') : [0, 0, 0];
+
+		d = new Date(tahun, bulan - 1, hari, jam, menit, detik);
+	}
+
+	if (!d || isNaN(d.getTime())) return "Format Tidak Valid";
+
+	// Array nama hari dan bulan dalam Bahasa Indonesia
+	const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+	const namaBulan = [
+		"Januari", "Februari", "Maret", "April", "Mei", "Juni",
+		"Juli", "Agustus", "September", "Oktober", "November", "Desember"
+	];
+
+	// Ambil komponen tanggal
+	const hariNama = namaHari[d.getDay()];
+	const tanggalTgl = d.getDate();
+	const bulanNama = namaBulan[d.getMonth()];
+	const tahunFull = d.getFullYear();
+  
+	// Format jam dan menit agar selalu 2 digit (misal: 08.05)
+	const jamFull = String(d.getHours()).padStart(2, '0');
+	const menitFull = String(d.getMinutes()).padStart(2, '0');
+	const detikFull = String(d.getSeconds()).padStart(2, '0');
+
+	// Susun hasil akhir: "Rabu, 7 Januari 2026 10:08 WIB"
+	return `${hariNama}, ${tanggalTgl} ${bulanNama} ${tahunFull} ${jamFull}:${menitFull}:${detikFull} WIB`;
+
+};
+</script>
+<script src="../js/back_home.js"></script> <!-- balikKandang(); -->
+</body>
+</html>

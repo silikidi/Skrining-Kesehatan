@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="id-id" style="--document-width: 100vw;--document-height: 100vh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sukma Budi with Gemini">
+<meta name="description" content="Skrining mandiri tingkat darurat RSUD Cibabat kini lebih mudah. Jawab beberapa pertanyaan untuk mengetahui status kegawatdaruratan Anda. Aman, praktis, dan keputusan cepat.">
+<meta property="og:title" content="RSUD Cibabat - Skrining Tingkat Darurat">
+<meta property="og:description" content="Skrining mandiri tingkat darurat RSUD Cibabat kini lebih mudah. Jawab beberapa pertanyaan untuk mengetahui status kegawatdaruratan Anda. Aman, praktis, dan keputusan cepat.">
+<meta property="og:image" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta property="og:url" content="https://rsudcibabat.cimahikota.go.id/skrining/darurat.html">
+<meta property="og:site_name" content="RSUD Cibabat Official Website">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RSUD Cibabat - Skrining Tingkat Darurat">
+<meta name="twitter:description" content="Skrining mandiri tingkat darurat RSUD Cibabat kini lebih mudah. Jawab beberapa pertanyaan untuk mengetahui status kegawatdaruratan Anda. Aman, praktis, dan keputusan cepat.">
+<meta property="twitter:image:src" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta name="twitter:url" content="https://rsudcibabat.cimahikota.go.id/skrining/darurat.html">
+<meta name="twitter:site" content="@rscibabat">
+
+<title>RSUD Cibabat - Skrining Tingkat Darurat</title>
+
+<link rel="apple-touch-icon" href="../images/logo/rsclogo.png">
+<link rel="icon" type="image/svg+xml" href="../images/logo/rsclogo.webp">
+<link rel="canonical" href="https://rsudcibabat.cimahikota.go.id/skrining/darurat.html">
+<link href="./dist/tailwind.css" rel="stylesheet">
+<link href="../css/sweetalert2.min.css" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "RSUD Cibabat - Skrining Tingkat Darurat",
+	"description": "Skrining mandiri tingkat darurat RSUD Cibabat kini lebih mudah. Jawab beberapa pertanyaan untuk mengetahui status kegawatdaruratan Anda. Aman, praktis, dan keputusan cepat.",
+	"image": [
+		"../images/logo/rsudcibabatwebmin.jpg"
+	]
+}
+</script>
+<style>
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.input-error { border-width: 5px; border-color: #ef4444 !important; background-color: #fef2f2 !important; }
+
+/* ========== VERTICAL BRAND ========== */
+.vertical-tag {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	pointer-events: none;
+}
+.vertical-tag span {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	white-space: nowrap;
+}
+/* ========== VERTICAL BRAND ========== */
+
+
+@media print {
+	.vertical-tag,
+	.no-print {
+		display: none !important;
+	}
+	body { background: white; padding: 0; }
+	.print-card { border: 2px solid #000; border-radius: 0; box-shadow: none; width: 100% !important; max-width: none !important; }
+}
+</style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+<div class="relative max-w-2xl m-auto">
+	<div class="m-4 shadow-2xl rounded-2xl">
+
+	<header class="p-6 md:p-6">
+		<small class="text-sm leading-none">Instrumen ATS</small>
+		<h1 class="text-4xl md:text-3xl text-slate-800 font-black leading-none">Skrining Tingkat Darurat</h1>
+		<p class="text-xs md:text-md text-slate-700 font-semibold uppercase leading-none mt-2">Skrining Mandiri RSUD Cibabat</p>
+	</header>
+
+	<div class="px-6 md:px-6 py-10 md:py-10 bg-[#f2f2f2] border-l-[5px] border-solid border-[#e1e1e1] no-print">
+		<p class="text-sm font-bold mb-2">DISCLAIMER</p>
+		<p class="text-sm leading-tight">
+			<a href="../kebijakan-privasi.html" target="_blank">Privasi Anda dijamin UU PDP 27 2022</a> proses skrining sepenuhnya berjalan di browser client dan tidak ada data yang dikirim ataupun disimpan di server manapun.
+			Hasil skrining ini bukanlah diagnosis medis. Saran dan penegakkan diagnosis medis tetap dilakukan dengan konseling langsung bersama <a href="../cek-tanggal.html">Dokter Ahli RSUD Cibabat</a>.
+			Skrining disusun menggunakan algoritma Decision Support System [DSS] yang merujuk pada pedoman Triage Nasional dan Australasian Triage Scale [ATS].
+		</p>
+	</div>
+
+	<div id="screeningSection" class="overflow-hidden">
+
+		<form id="triageForm" class="p-6 space-y-5">
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+				<div>
+					<label class="block font-bold text-sm md:text-xl text-slate-700 mb-1"><span class="uppercase tracking-wide">Suhu Tubuh</span> [°C]</label>
+					<input id="temp" type="number" step="0.1" placeholder="misal 36.5" class="w-full p-3 bg-slate-50 border border-slate-300 rounded-xl outline-none transition-all">
+				</div>
+				<div>
+					<label class="block font-bold text-sm md:text-xl text-slate-700 mb-1"><span class="uppercase tracking-wide">Saturasi</span> [SpO2 %]</label>
+					<input id="spo2" type="number" placeholder="(opsional) misal 95-100" class="w-full p-3 bg-slate-50 border border-slate-300 rounded-xl outline-none transition-all">
+				</div>
+			</div>
+
+			<div>
+
+				<div class="grid gap-2">
+
+					<p class="mt-8 text-sm md:text-md text-red-600 font-bold uppercase">Kategori Darurat [Emergency]</p>
+
+					<label class="flex items-center p-3 bg-red-50 border border-red-100 rounded-xl cursor-pointer hover:bg-red-100 transition">
+						<input id="critical_breath" type="checkbox" class="w-5 h-5 text-red-600 rounded">
+						<span class="ml-4 text-sm md:text-xl text-slate-700 font-medium">Sesak napas berat atau bicara terputus</span>
+					</label>
+					<label class="flex items-center p-3 bg-red-50 border border-red-100 rounded-xl cursor-pointer hover:bg-red-100 transition">
+						<input id="critical_chest" type="checkbox" class="w-5 h-5 text-red-600 rounded">
+						<span class="ml-4 text-sm md:text-xl text-slate-700 font-medium">Nyeri dada seperti tertindih beban</span>
+					</label>
+					<label class="flex items-center p-3 bg-red-50 border border-red-100 rounded-xl cursor-pointer hover:bg-red-100 transition">
+						<input id="critical_trauma" type="checkbox" class="w-5 h-5 text-red-600 rounded">
+						<span class="ml-4 text-sm md:text-xl text-slate-700 font-medium">Perdarahan hebat atau patah tulang terbuka</span>
+					</label>
+
+					<p class="mt-8 text-sm md:text-md text-amber-600 font-bold uppercase">Kategori Mendesak [Urgency]</p>
+
+					<label class="flex items-center p-3 bg-amber-50 border border-amber-100 rounded-xl cursor-pointer hover:bg-amber-100 transition">
+						<input id="urgent_pain" type="checkbox" class="w-5 h-5 text-amber-600 rounded">
+						<span class="ml-4 text-sm md:text-xl text-slate-700 font-medium">Nyeri perut atau nyeri pinggang hebat [mendadak]</span>
+					</label>
+					<label class="flex items-center p-3 bg-amber-50 border border-amber-100 rounded-xl cursor-pointer hover:bg-amber-100 transition">
+						<input id="urgent_fluid" type="checkbox" class="w-5 h-5 text-amber-600 rounded">
+						<span class="ml-4 text-sm md:text-xl text-slate-700 font-medium">Muntah atau Diare berat [>5x sehari]</span>
+					</label>
+					<label class="flex items-center p-3 bg-amber-50 border border-amber-100 rounded-xl cursor-pointer hover:bg-amber-100 transition">
+						<input id="urgent_allergy" type="checkbox" class="w-5 h-5 text-amber-600 rounded">
+						<span class="ml-4 text-sm md:text-xl text-slate-700 font-medium">Reaksi alergi mendadak &amp; meluas</span>
+					</label>
+
+				</div>
+			</div>
+
+			<div class="my-8">
+				<label class="block mb-1 text-sm md:text-md font-bold text-slate-800 uppercase">catatan tambahan</label>
+				<textarea id="userNotes" rows="2" placeholder="Riwayat penyakit, alergi obat, atau kronologi singkat..." class="w-full p-3 bg-slate-50 border border-slate-300 rounded-xl text-sm outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+			</div>
+
+			<button type="button" onclick="evaluateTriage()" class="py-4 w-full text-sm md:text-md text-white font-bold uppercase tracking-wide bg-red-700 hover:bg-red-800 rounded-xl shadow-lg transition-all active:scale-95">
+				Analisis Tingkat Darurat
+			</button>
+		</form>
+	</div>
+
+	<div id="dashboardSection" class="hidden p-6 overflow-hidden print-card">
+		<div id="headerColor" class="mt-6 text-white flex flex-col md:flex-row justify-between items-center rounded-xl">
+			<div id="statusBadge" class="px-4 py-1 text-sm font-bold uppercase leading-none border-2 border-white rounded-full"></div>
+			<p id="currentTime" class="mt-2 md:mt-0 text-xs text-center md:text-left font-mono uppercase leading-none"></p>
+			<!--
+			<div>
+				<h2 class="font-bold text-center md:text-left text-md md:text-lg leading-none">RINGKASAN SKRINING IGD</h2>
+			</div>
+			-->
+		</div>
+
+		<div class="my-4">
+			<div class="grid grid-cols-2 gap-4">
+				<div class="p-3 text-center rounded-2xl bg-slate-50 border border-slate-300">
+					<p class="text-sm text-slate-500 uppercase font-bold">Suhu Tubuh</p>
+					<p id="resTemp" class="text-2xl font-black text-slate-800">-</p>
+				</div>
+				<div class="p-3 text-center rounded-2xl bg-slate-50 border border-slate-300">
+					<p class="text-sm text-slate-500 uppercase font-bold">Saturasi O2</p>
+					<p id="resSpo2" class="text-2xl font-black text-slate-800">-</p>
+				</div>
+			</div>
+
+			<div class="mt-4">
+				<!--
+				<p class="text-sm font-bold text-slate-400 uppercase mb-2 tracking-widest">Pemeriksaan Kriteria</p>
+				-->
+				<div id="resSymptomsFull" class="md:p-4 grid grid-cols-1 gap-1"></div>
+			</div>
+
+			<div id="noteContainer" class="hidden p-4 bg-blue-50 rounded-2xl border border-blue-100">
+				<p class="mb-1 text-sm font-bold text-blue-700 uppercase">Catatan Pasien</p>
+				<p id="resNotes" class="text-sm text-slate-700 font-medium"></p>
+			</div>
+
+			<div class="my-6 pt-4 border-t border-dashed border-slate-300">
+				<!--
+				<p class="text-sm font-bold text-slate-400 uppercase mb-2">Analisis &amp; Rekomendasi Layanan</p>
+				-->
+				<div id="resAdvice" class="text-sm text-slate-700 text-center leading-none bg-slate-50 rounded-2xl"></div>
+			</div>
+
+			<div class="flex flex-col gap-4 no-print">
+				<div class="flex flex-row gap-4">
+					<button id="headerColor2" onclick="window.print()" class="py-2 md:py-4 text-sm text-white font-bold flex-1 rounded-xl">CETAK PDF</button>
+					<button onclick="resetFormulir()" class="py-2 md:py-4 text-sm text-slate-600 font-bold flex-1 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-xl transition-all">ULANGI</button>
+				</div>
+				<button onclick="balikKandang()" class="py-2 md:py-4 text-sm text-white font-bold flex-1 bg-red-700 hover:bg-red-900 border border-red-300 rounded-xl transition-all">KEMBALI</button>
+			</div>
+		</div>
+	</div>
+		
+		<div class="no-print" style="height: 50px;"></div>
+		
+	</div>
+
+
+	<!-- VERTICAL BRAND -->
+	<div class="vertical-tag no-print absolute left right-[96%] md:right-[100%] p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+
+	<div class="vertical-tag no-print absolute right left-[96%] md:left-[100%] rotate-180 p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+	<!-- VERTICAL BRAND -->
+</div>
+
+<script src="../js/sweetalert2.all.min.js"></script>
+<script>
+function evaluateTriage() {
+	// Ambil elemen input untuk validasi
+	const tempInput = document.getElementById('temp');
+	const spo2Input = document.getElementById('spo2');
+	
+	const tempVal = tempInput.value;
+	const spo2Val = spo2Input.value;
+	const notes = document.getElementById('userNotes').value;
+
+	// Reset highlight error sebelumnya
+	tempInput.classList.remove('input-error');
+	spo2Input.classList.remove('input-error');
+
+	// 1. VALIDASI: WAJIB ISI & HIGHLIGHT
+	if(tempVal === "") {
+		Swal.fire({
+			title: 'INPUT WAJIB',
+			text: 'Mohon masukkan angka Suhu Tubuh untuk melanjutkan analisis.',
+			icon: 'warning',
+			confirmButtonColor: '#1e40af',
+			returnFocus: false
+		}).then(() => {
+			tempInput.focus(); // Auto-focus ke input
+			tempInput.classList.add('input-error'); // Highlight merah
+		});
+		return;
+	}
+
+	// Validasi Rentang Suhu Wajar
+	if(parseFloat(tempVal) < 30 || parseFloat(tempVal) > 45) {
+		Swal.fire('SUHU TIDAK WAJAR', 'Mohon masukkan suhu tubuh antara 30°C - 45°C.', 'error').then(() => {
+			tempInput.focus();
+			tempInput.classList.add('input-error');
+		});
+		return;
+	}
+
+	// 2. LOGIKA EVALUASI
+	const temp = parseFloat(tempVal);
+	const spo2 = spo2Val === "" ? 100 : parseFloat(spo2Val);
+
+	const checks = [
+		{ id: "Sesak Napas Berat", val: document.getElementById('critical_breath').checked, type: 'EMERGENCY' },
+		{ id: "Nyeri Dada Hebat", val: document.getElementById('critical_chest').checked, type: 'EMERGENCY' },
+		{ id: "Trauma atau Perdarahan", val: document.getElementById('critical_trauma').checked, type: 'EMERGENCY' },
+		{ id: "Nyeri Perut atau Nyeri Pinggang Akut", val: document.getElementById('urgent_pain').checked, type: 'URGENT' },
+		{ id: "Muntah atau Diare Berat", val: document.getElementById('urgent_fluid').checked, type: 'URGENT' },
+		{ id: "Reaksi Alergi Mendadak", val: document.getElementById('urgent_allergy').checked, type: 'URGENT' }
+	];
+
+	const isEmergency = checks.filter(c => c.type === 'EMERGENCY').some(c => c.val) || spo2 < 94;
+	const isUrgent = checks.filter(c => c.type === 'URGENT').some(c => c.val) || (temp >= 39 || temp <= 35);
+
+	// 3. RENDER DASHBOARD (Sesuai Desain Manual Anda)
+	document.getElementById('resTemp').innerText = temp + "°C";
+	document.getElementById('resSpo2').innerText = (spo2Val === "" ? "N/A" : spo2 + "%");
+	
+	const tglSekarang = new Date().toLocaleString('id-ID');
+	document.getElementById('currentTime').innerText = tglIndonesiaFormat(tglSekarang);
+
+	if(notes.trim() !== "") {
+		document.getElementById('noteContainer').classList.remove('hidden');
+		document.getElementById('resNotes').innerText = notes;
+	}
+
+	// Render Keluhan dengan highlight warna sesuai status darurat
+	document.getElementById('resSymptomsFull').innerHTML = checks.map(c => `
+		<div class="md:p-2 flex justify-between items-center border-b border-slate-50">
+			<span class="text-xs md:text-lg ${c.val ? 'font-bold text-slate-800' : 'text-slate-500'}">${c.id}</span>
+			<span class="text-xs md:text-lg font-bold ${c.val ? (c.type === 'EMERGENCY' ? 'text-red-600' : 'text-amber-600') : 'text-slate-500'}">
+				${c.val ? 'POSITIF' : 'NEGATIF'}
+			</span>
+		</div>
+	`).join('');
+
+	// Penentuan Status & Konten Advice
+	let statusTitle, statusColor, headerClass, adviceHtml;
+
+	if (isEmergency) {
+		statusTitle = "EMERGENSI/DARURAT [MERAH]";
+		statusColor = "#ef4444";
+		headerClass = "bg-red-600";
+		adviceHtml = `
+			<div class="p-4 border-l-4 border-red-600 bg-red-50 rounded-r-2xl">
+				<p class="mb-1 text-red-600 font-bold tracking-widest uppercase">Tindakan Segera</p>
+				<ul class="list-disc ml-4 space-y-1 text-left">
+					<li>Pasien harus segera ditangani petugas Triage dalam 0-10 menit.</li>
+					<li><b>Klaim BPJS:</b> Berpotensi kuat masuk kriteria Gawat Darurat Medis.</li>
+					<li>Jangan berikan cairan apapun melalui mulut sampai instruksi dokter.</li>
+				</ul>
+			</div>`;
+	} else if (isUrgent) {
+		statusTitle = "URGENSI/MENDESAK [KUNING]";
+		statusColor = "#f59e0b";
+		headerClass = "bg-amber-500";
+		adviceHtml = `
+			<div class="p-4 border-l-4 border-amber-500 bg-amber-50 rounded-r-2xl text-left">
+				<p class="mb-1 text-amber-700 font-bold tracking-widest uppercase text-center">Analisis Ketentuan</p>
+				<ul class="list-disc ml-4 space-y-1">
+					<li>Kondisi ini memerlukan observasi medis segera namun masih stabil.</li>
+					<li class="font-bold text-red-600 underline">PENTING: Keluhan ini berisiko ditolak Klaim BPJS (Non-Gadar).</li>
+					<li class="bg-blue-100 p-2 rounded text-blue-800 mt-2 font-semibold">
+						Rekomendasi: Gunakan layanan FAST TRACK (Mandiri) untuk penanganan prioritas tanpa rujukan.
+					</li>
+				</ul>
+			</div>`;
+	} else {
+		statusTitle = "NON-URGENSI [HIJAU]";
+		statusColor = "#10b981";
+		headerClass = "bg-emerald-600";
+		adviceHtml = `
+			<div class="p-4 text-sm md:text-lg text-center md:text-left border-l-4 border-emerald-500 bg-emerald-50 rounded-r-2xl">
+				<p class="mb-2 text-emerald-700 font-bold tracking-widest uppercase leading-none">Saran Perawatan</p>
+				<p class="leading-none">Kondisi saat ini stabil. Disarankan untuk mengunjungi Puskesmas atau Klinik Pratama untuk rujukan berjenjang.</p>
+			</div>`;
+	}
+
+	// 4. NOTIFIKASI FINISH & TRANSISI
+	Swal.fire({
+		title: 'Hasil Skrining Siap',
+		text: 'Ringkasan medis telah dibuat untuk membantu pendaftaran di RSUD Cibabat.',
+		icon: 'success',
+		confirmButtonText: 'Buka Dashboard',
+		confirmButtonColor: '#1e40af'
+	}).then(() => {
+		document.getElementById('screeningSection').classList.add('hidden');
+		document.getElementById('dashboardSection').classList.remove('hidden');
+		
+		document.getElementById('headerColor').className = `p-6 text-white flex flex-col md:flex-row justify-between items-center rounded-2xl ${headerClass}`;
+		document.getElementById('headerColor2').className = `py-4 text-sm text-white font-bold flex-1 rounded-xl ${headerClass}`;
+
+		const badge = document.getElementById('statusBadge');
+		badge.innerText = statusTitle;
+		badge.style.backgroundColor = statusColor;
+		document.getElementById('resAdvice').innerHTML = adviceHtml;
+	});
+}
+
+
+function resetFormulir() {
+	// 1. Reset semua input teks, nomor, dan checkbox di dalam form
+	document.getElementById('triageForm').reset();
+
+	// 2. Sembunyikan Dashboard dan tampilkan kembali Form Skrining
+	document.getElementById('dashboardSection').classList.add('hidden');
+	document.getElementById('screeningSection').classList.remove('hidden');
+
+	// 3. Sembunyikan kontainer catatan tambahan jika sebelumnya muncul
+	document.getElementById('noteContainer').classList.add('hidden');
+
+	// 4. Reset highlight error (merah) jika ada
+	document.getElementById('temp').classList.remove('input-error');
+	document.getElementById('spo2').classList.remove('input-error');
+
+	// 5. Scroll kembali ke atas halaman
+	window.scrollTo(0, 0);
+}
+
+
+const tglIndonesiaFormat = (tanggal) => {
+
+	let d;
+
+	if (tanggal instanceof Date && !isNaN(tanggal)) {
+		d = tanggal;
+	} else if (typeof tanggal === 'string') {
+		// Memisahkan "07/01/2026, 10.08.26"
+		const [tglPart, jamPart] = tanggal.split(', ');
+		const [hari, bulan, tahun] = tglPart.split('/');
+		const [jam, menit, detik] = jamPart ? jamPart.split('.') : [0, 0, 0];
+
+		d = new Date(tahun, bulan - 1, hari, jam, menit, detik);
+	}
+
+	if (!d || isNaN(d.getTime())) return "Format Tidak Valid";
+
+	// Array nama hari dan bulan dalam Bahasa Indonesia
+	const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+	const namaBulan = [
+		"Januari", "Februari", "Maret", "April", "Mei", "Juni",
+		"Juli", "Agustus", "September", "Oktober", "November", "Desember"
+	];
+
+	// Ambil komponen tanggal
+	const hariNama = namaHari[d.getDay()];
+	const tanggalTgl = d.getDate();
+	const bulanNama = namaBulan[d.getMonth()];
+	const tahunFull = d.getFullYear();
+  
+	// Format jam dan menit agar selalu 2 digit (misal: 08.05)
+	const jamFull = String(d.getHours()).padStart(2, '0');
+	const menitFull = String(d.getMinutes()).padStart(2, '0');
+	const detikFull = String(d.getSeconds()).padStart(2, '0');
+
+	// Susun hasil akhir: "Rabu, 7 Januari 2026 10:08 WIB"
+	return `${hariNama}, ${tanggalTgl} ${bulanNama} ${tahunFull} ${jamFull}:${menitFull}:${detikFull} WIB`;
+
+};
+</script>
+<script src="../js/back_home.js"></script> <!-- balikKandang(); -->
+</body>
+</html>

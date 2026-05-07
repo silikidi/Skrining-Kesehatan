@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="id-id" style="--document-width: 100vw;--document-height: 100vh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sukma Budi with Gemini">
+<meta name="description" content="Mata sering lelah atau perih di depan layar? Cek kesehatan mata Anda sekarang! Ikuti Skrining Online Kelelahan Mata (CVS) gratis untuk deteksi dini di sini.">
+<meta property="og:title" content="RSUD Cibabat - Skrining Kelelahan Mata Dengan CVS">
+<meta property="og:description" content="Mata sering lelah atau perih di depan layar? Cek kesehatan mata Anda sekarang! Ikuti Skrining Online Kelelahan Mata (CVS) gratis untuk deteksi dini di sini.">
+<meta property="og:image" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta property="og:url" content="https://rsudcibabat.cimahikota.go.id/skrining/cvs.html">
+<meta property="og:site_name" content="RSUD Cibabat Official Website">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RSUD Cibabat - Skrining Kelelahan Mata Dengan CVS">
+<meta name="twitter:description" content="Mata sering lelah atau perih di depan layar? Cek kesehatan mata Anda sekarang! Ikuti Skrining Online Kelelahan Mata (CVS) gratis untuk deteksi dini di sini.">
+<meta property="twitter:image:src" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta name="twitter:url" content="https://rsudcibabat.cimahikota.go.id/skrining/cvs.html">
+<meta name="twitter:site" content="@rscibabat">
+
+<title>RSUD Cibabat - Skrining Kelelahan Mata Dengan CVS</title>
+
+<link rel="apple-touch-icon" href="../images/logo/rsclogo.png">
+<link rel="icon" type="image/svg+xml" href="../images/logo/rsclogo.webp">
+<link rel="canonical" href="https://rsudcibabat.cimahikota.go.id/skrining/cvs.html">
+<link href="./dist/tailwind.css" rel="stylesheet">
+<link href="../css/sweetalert2.min.css" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "RSUD Cibabat - Skrining Kelelahan Mata Dengan CVS",
+	"description": "Mata sering lelah atau perih di depan layar? Cek kesehatan mata Anda sekarang! Ikuti Skrining Online Kelelahan Mata (CVS) gratis untuk deteksi dini di sini.",
+	"image": [
+		"../images/logo/rsudcibabatwebmin.jpg"
+	]
+}
+</script>
+<style>
+.bg-image {
+	background-image: url('../images/wallpaper/gradien1-minr.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+.option-btn {
+	height: 55px;
+}
+.option-btn.active {
+	background-color: #193cb8 !important; /* Blue-700 */
+	color: white !important;
+	border-color: #1d4ed8 !important;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+	font-size: 1.1rem;
+}
+.highlight-error {
+	border: 2px solid #ef4444 !important;
+	padding: 15px;
+	border-radius: 12px;
+	background-color: #fff1f2;
+	transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+}
+
+/* ========== VERTICAL BRAND ========== */
+.vertical-tag {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	pointer-events: none;
+}
+.vertical-tag span {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	white-space: nowrap;
+}
+/* ========== VERTICAL BRAND ========== */
+</style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-900">
+
+<div class="relative max-w-5xl mx-auto my-10">
+
+	<div id="capture-area" class="bg-white rounded-2xl shadow-2xl">
+
+		<header class="p-6 md:p-6">
+			<small class="text-sm leading-none">Instrumen CVS-Q</small>
+			<h1 class="text-3xl text-slate-800 font-black leading-none">Skrining Kelelahan Mata</h1>
+			<p class="text-md text-slate-700 font-semibold uppercase leading-none mt-2">Skrining Mandiri RSUD Cibabat</p>
+		</header>
+
+		<div class="px-6 md:px-6 py-10 md:py-10 bg-[#f2f2f2] border-l-[5px] border-solid border-[#e1e1e1]">
+			<p class="text-sm font-bold mb-2">DISCLAIMER</p>
+			<p class="mb-8 text-sm leading-tight">
+				<a href="../kebijakan-privasi.html" target="_blank">Privasi Anda dijamin UU PDP 27 2022</a> proses skrining sepenuhnya berjalan di browser client dan tidak ada data yang dikirim ataupun disimpan di server manapun.
+				Hasil skrining ini bukanlah diagnosis medis. Saran dan penegakkan diagnosis medis tetap dilakukan dengan konseling langsung bersama <a href="#panel-klinik">Dokter Ahli RSUD Cibabat</a>.
+				Skrining mengacu pada riset CVS-Q <a href="https://doi.org/10.1016/j.jclinepi.2015.01.015" target="_blank" rel="noopener noreferrer">María del Mar Seguí et al.</a> (2015) yang divalidasi secara internasional untuk mendeteksi kelelahan mata digital melalui frekuensi gejala klinis.
+			</p>
+			<p class="md:text-4xl font-semibold text-center leading-none">
+				Gunakan skrining ini jika Anda menghabiskan lebih dari 3 jam sehari di depan layar digital komputer atau selular
+			</p>
+		</div>
+
+		<form id="cvsForm">
+            <div class="p-6 mt-6 grid grid-cols-1 md:grid-cols-2 md:gap-20">
+
+				<div id="q1" class="mb-6 question-block">
+					<div class="mb-4 flex flex-row justify-start items-start gap-[5px] md:gap-[10px] text-xl md:text-3xl font-semibold text-[#107fe1] leading-none">
+						<div class="w-[30px] md:w-[50px] flex items-center justify-center text-center text-white bg-[#77bfff]">
+							<span>1</span>
+						</div>
+						<div class="leading-none">Mata Terasa Perih</div>
+					</div>
+                    <div class="flex gap-2 font-semibold">
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="0">Tidak</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="1">Jarang</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="2">Sering</button>
+                        <input type="hidden" class="symptom-val" required>
+                    </div>
+                </div>
+
+                <div id="q2" class="mb-6 question-block">
+					<div class="mb-4 flex flex-row justify-start items-start gap-[5px] md:gap-[10px] text-xl md:text-3xl font-semibold text-[#107fe1] leading-none">
+						<div class="w-[30px] md:w-[50px] flex items-center justify-center text-center text-white bg-[#77bfff]">
+							<span>2</span>
+						</div>
+						<div class="leading-none">Mata Merah</div>
+					</div>
+                    <div class="flex gap-2 font-semibold">
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="0">Tidak</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="1">Jarang</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="2">Sering</button>
+                        <input type="hidden" class="symptom-val" required>
+                    </div>
+                </div>
+
+                <div id="q3" class="mb-6 question-block">
+					<div class="mb-4 flex flex-row justify-start items-start gap-[5px] md:gap-[10px] text-xl md:text-3xl font-semibold text-[#107fe1] leading-none">
+						<div class="w-[30px] md:w-[50px] flex items-center justify-center text-center text-white bg-[#77bfff]">
+							<span>3</span>
+						</div>
+						<div class="leading-none">Mata Terasa Kering</div>
+					</div>
+                    <div class="flex gap-2 font-semibold">
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="0">Tidak</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="1">Jarang</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="2">Sering</button>
+                        <input type="hidden" class="symptom-val" required>
+                    </div>
+                </div>
+
+                <div id="q4" class="mb-6 question-block">
+					<div class="mb-4 flex flex-row justify-start items-start gap-[5px] md:gap-[10px] text-xl md:text-3xl font-semibold text-[#107fe1] leading-none">
+						<div class="w-[30px] md:w-[50px] flex items-center justify-center text-center text-white bg-[#77bfff]">
+							<span>4</span>
+						</div>
+						<div class="leading-none">Sensasi Berpasir</div>
+					</div>
+                    <div class="flex gap-2 font-semibold">
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="0">Tidak</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="1">Jarang</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="2">Sering</button>
+                        <input type="hidden" class="symptom-val" required>
+                    </div>
+                </div>
+
+                <div id="q5" class="mb-6 question-block">
+					<div class="mb-4 flex flex-row justify-start items-start gap-[5px] md:gap-[10px] text-xl md:text-3xl font-semibold text-[#107fe1] leading-none">
+						<div class="w-[30px] md:w-[50px] flex items-center justify-center text-center text-white bg-[#77bfff]">
+							<span>5</span>
+						</div>
+						<div class="leading-none">Pandangan Kabur</div>
+					</div>
+                    <div class="flex gap-2 font-semibold">
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="0">Tidak</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="1">Jarang</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="2">Sering</button>
+                        <input type="hidden" class="symptom-val" required>
+                    </div>
+                </div>
+
+                <div id="q6" class="mb-6 question-block">
+					<div class="mb-4 flex flex-row justify-start items-start gap-[5px] md:gap-[10px] text-xl md:text-3xl font-semibold text-[#107fe1] leading-none">
+						<div class="w-[30px] md:w-[50px] flex items-center justify-center text-center text-white bg-[#77bfff]">
+							<span>6</span>
+						</div>
+						<div class="leading-none">Pandangan Ganda</div>
+					</div>
+                    <div class="flex gap-2 font-semibold">
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="0">Tidak</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="1">Jarang</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="2">Sering</button>
+                        <input type="hidden" class="symptom-val" required>
+                    </div>
+                </div>
+
+                <div id="q7" class="mb-6 question-block">
+					<div class="mb-4 flex flex-row justify-start items-start gap-[5px] md:gap-[10px] text-xl md:text-3xl font-semibold text-[#107fe1] leading-none">
+						<div class="w-[30px] md:w-[50px] flex items-center justify-center text-center text-white bg-[#77bfff]">
+							<span>7</span>
+						</div>
+						<div class="leading-none">Sensitif Terhadap Cahaya</div>
+					</div>
+                    <div class="flex gap-2 font-semibold">
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="0">Tidak</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="1">Jarang</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="2">Sering</button>
+                        <input type="hidden" class="symptom-val" required>
+                    </div>
+                </div>
+
+                <div id="q8" class="mb-6 question-block">
+					<div class="mb-4 flex flex-row justify-start items-start gap-[5px] md:gap-[10px] text-xl md:text-3xl font-semibold text-[#107fe1] leading-none">
+						<div class="w-[30px] md:w-[50px] flex items-center justify-center text-center text-white bg-[#77bfff]">
+							<span>8</span>
+						</div>
+						<div class="leading-none">Nyeri Kepala</div>
+					</div>
+                    <div class="flex gap-2 font-semibold">
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="0">Tidak</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="1">Jarang</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="2">Sering</button>
+                        <input type="hidden" class="symptom-val" required>
+                    </div>
+                </div>
+
+                <div id="q9" class="mb-6 question-block">
+					<div class="mb-4 flex flex-row justify-start items-start gap-[5px] md:gap-[10px] text-xl md:text-3xl font-semibold text-[#107fe1] leading-none">
+						<div class="w-[30px] md:w-[50px] flex items-center justify-center text-center text-white bg-[#77bfff]">
+							<span>9</span>
+						</div>
+						<div class="leading-none">Nyeri Leher atau Bahu</div>
+					</div>
+                    <div class="flex gap-2 font-semibold">
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="0">Tidak</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="1">Jarang</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="2">Sering</button>
+                        <input type="hidden" class="symptom-val" required>
+                    </div>
+                </div>
+
+                <div id="q10" class="mb-6 question-block">
+					<div class="mb-4 flex flex-row justify-start items-start gap-[5px] md:gap-[10px] text-xl md:text-3xl font-semibold text-[#107fe1] leading-none">
+						<div class="w-[30px] md:w-[50px] flex items-center justify-center text-center text-white bg-[#77bfff]">
+							<span>10</span>
+						</div>
+						<div class="leading-none">Sulit Fokus Objek Jauh</div>
+					</div>
+                    <div class="flex gap-2 font-semibold">
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="0">Tidak</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="1">Jarang</button>
+                        <button type="button" class="option-btn flex-1 py-2 text-sm text-slate-500 border border-gray-300 rounded-lg" data-val="2">Sering</button>
+                        <input type="hidden" class="symptom-val" required>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+			
+		<div id="result-box" class="hidden mt-6 p-8 border-2 border-dashed border-blue-300 bg-blue-50 rounded-b-2xl text-center">
+			<p class="font-bold text-blue-700 uppercase tracking-widest">Skor Anda</p>
+			<div id="result-score" class="text-8xl font-black text-blue-900">0</div>
+			<div id="result-level" class="text-2xl md:text-4xl font-black uppercase leading-none"></div>
+			<h3 id="result-title" class="mb-2 text-2xl font-black leading-none"></h3>
+			<p id="result-desc" class="text-slate-600 leading-relaxed leading-tight"></p>
+			<p id="result-date" class="mt-4 text-xs text-slate-400"></p>
+		</div>
+
+    </div>
+
+	<div class="my-8 p-6 md:p-6 flex flex-col flex-wrap justify-center gap-3 screenshot-target">
+		<button onclick="processResult()" class="px-2 md:px-8 py-5 text-[1.1em] md:text-[1.5em] bg-image font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer">Hitung</button>
+		<div id="screenshot-buttonblock" class="grid grid-cols-2 gap-2">
+			<button onclick="takeScreenshot()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Screenshot</button>
+			<button onclick="shareWA()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Bagikan</button>
+		</div>
+		<div class="grid grid-cols-2 gap-2">
+			<button onclick="resetSurvey()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Reset</button>
+			<button onclick="balikKandang()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Kembali</button>
+		</div>
+	</div>
+
+	<div id="panel-klinik" class="p-6 md:p-6 rounded-2xl bg-image shadow-2xl screenshot-target">
+		<div class="text-[3em] text-black text-center font-black leading-none pt-10">
+			Tenang..
+		</div>
+		<div class="text-[1.2em] md:text-[1.7em] font-semibold text-black text-center leading-tight py-4">
+			Sindrom Computer Vision dapat ditangani secara medis dengan penanganan yang tepat bersama Dokter Ahli RSUD Cibabat
+		</div>
+		<div class="mb-4 text-[1.3em] md:text-[2.5em] text-black text-center font-black leading-none">
+			Konsultasi Dokter Ahli
+		</div>
+		<div class="grid grid-cols-2 gap-2 pb-10">
+			<button class="px-2 py-4 text-[16px] md:text-[18px] font-bold uppercase leading-none bg-white hover:bg-gray-300 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Janji Temu</button>
+			<button class="px-2 py-4 text-[16px] md:text-[18px] font-bold uppercase leading-none bg-white hover:bg-gray-300 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Profil Layanan</button>
+		</div>
+	</div>
+
+	<!-- VERTICAL BRAND -->
+	<div class="absolute vertical-tag left right-[97%] md:right-[100%] p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+
+	<div class="absolute vertical-tag right left-[97%] md:left-[100%] rotate-180 p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+	<!-- VERTICAL BRAND -->
+
+</div>
+
+<script src="../js/sweetalert2.all.min.js"></script>
+<script src="../js/modern-screenshot4.6.8.min.js"></script>
+
+<script>
+// Logic Toggle Button
+document.querySelectorAll('.option-btn').forEach(button => {
+	button.addEventListener('click', function() {
+		const parent = this.closest('.question-block');
+		parent.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('active'));
+		this.classList.add('active');
+		parent.querySelector('.symptom-val').value = this.dataset.val;
+		parent.classList.remove('highlight-error', 'border-red-400');
+	});
+});
+
+function validasi() {
+	const inputs = document.querySelectorAll('.symptom-val');
+	for (let input of inputs) {
+		if (input.value === "") {
+			const parent = input.closest('.question-block');
+			parent.classList.add('highlight-error', 'border-red-400');
+
+			Swal.fire({
+				icon: 'warning',
+				title: 'Belum Selesai',
+				text: 'Terdapat pertanyaan yang belum dijawab. Mohon periksa area yang berwarna merah.',
+				confirmButtonColor: '#1d4ed8',
+				returnFocus: false
+			}).then((result) => {
+				parent.scrollIntoView({ behavior: 'smooth', block: 'center' });
+			});
+			return false;
+		}
+	}
+	return true;
+}
+
+function processResult() {
+    if (!validasi()) return;
+
+    let total = 0;
+    document.querySelectorAll('.symptom-val').forEach(input => {
+        total += parseInt(input.value);
+    });
+
+    const resultBox = document.getElementById('result-box');
+    const resultScore = document.getElementById('result-score');
+    const resultTitle = document.getElementById('result-title');
+    const resultDesc = document.getElementById('result-desc');
+    const resultLevel = document.getElementById('result-level');
+
+    resultBox.classList.remove('hidden');
+    resultScore.innerText = total; // Menampilkan angka skor
+
+	const tglSekarang = new Date().toLocaleString('id-ID');
+	document.getElementById('result-date').innerText = tglIndonesiaFormat(tglSekarang);
+
+    // Logika Penentuan Kategori berdasarkan Angka
+    if (total >= 13) {
+        resultLevel.innerText = "Kategori: Berat";
+        resultLevel.className = "mb-6 inline-block px-4 py-1 rounded-full text-white font-bold text-2xl md:text-4xl uppercase leading-none bg-red-600";
+        resultTitle.innerText = "Indikasi CVS Berat";
+        resultDesc.innerText = "Skor Anda sangat tinggi. Segera jadwalkan pemeriksaan dengan spesialis mata RSUD Cibabat untuk mencegah penurunan fungsi penglihatan.";
+    } else if (total >= 6) {
+        resultLevel.innerText = "Kategori: Ringan-Sedang";
+        resultLevel.className = "mb-6 inline-block px-4 py-1 rounded-full text-white font-bold text-2xl md:text-4xl uppercase leading-none bg-orange-500";
+        resultTitle.innerText = "Gejala CVS Terdeteksi";
+        resultDesc.innerText = "Mata Anda menunjukkan tanda kelelahan digital. Disarankan untuk mengatur pencahayaan ruangan dan konsultasi jika keluhan berlanjut.";
+    } else {
+        resultLevel.innerText = "Kategori: Normal";
+        resultLevel.className = "mb-6 inline-block px-4 py-1 rounded-full text-white font-bold text-2xl md:text-4xl uppercase leading-none bg-green-600";
+        resultTitle.innerText = "Mata Anda Sehat";
+        resultDesc.innerText = "Skor Anda menunjukkan kondisi mata yang prima. Tetap pertahankan kebiasaan baik dalam menggunakan perangkat digital.";
+    }
+
+    // Scroll otomatis ke hasil
+    resultBox.scrollIntoView({ behavior: 'smooth' });
+}
+
+async function takeScreenshot() {
+	if (!validasi()) return;
+
+	const element = document.getElementById('capture-area');
+	const btnSave = event.target;
+	btnSave.innerText = "Memproses...";
+
+	try {
+		const dataUrl = await modernScreenshot.domToPng(element);
+		const link = document.createElement('a');
+		link.download = 'Skrining-CVS-RSUD-Cibabat.png';
+		link.href = dataUrl;
+		link.click();
+		Swal.fire('Berhasil!', 'Laporan telah disimpan ke perangkat Anda.', 'success');
+	} catch (error) {
+		Swal.fire('Gagal', 'Sistem gagal mengambil screenshot. Silakan coba lagi.', 'error');
+	} finally {
+		btnSave.innerText = "SIMPAN PNG";
+	}
+}
+
+function resetSurvey() {
+	document.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('active'));
+	document.querySelectorAll('.symptom-val').forEach(input => input.value = "");
+	document.querySelectorAll('.question-block').forEach(q => q.classList.remove('highlight-error', 'border-red-400'));
+	document.getElementById('result-box').classList.add('hidden');
+
+    setTimeout(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 200);
+}
+
+function shareWA() {
+	const text = "Saya baru saja melakukan pemeriksaan mata mandiri melalui Skrining Online CVS RSUD Cibabat. Yuk, cek kesehatan mata kamu di: " + window.location.href;
+	window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+}
+
+
+
+const tglIndonesiaFormat = (tanggal) => {
+
+	let d;
+
+	if (tanggal instanceof Date && !isNaN(tanggal)) {
+		d = tanggal;
+	} else if (typeof tanggal === 'string') {
+		// Memisahkan "07/01/2026, 10.08.26"
+		const [tglPart, jamPart] = tanggal.split(', ');
+		const [hari, bulan, tahun] = tglPart.split('/');
+		const [jam, menit, detik] = jamPart ? jamPart.split('.') : [0, 0, 0];
+
+		d = new Date(tahun, bulan - 1, hari, jam, menit, detik);
+	}
+
+	if (!d || isNaN(d.getTime())) return "Format Tidak Valid";
+
+	// Array nama hari dan bulan dalam Bahasa Indonesia
+	const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+	const namaBulan = [
+		"Januari", "Februari", "Maret", "April", "Mei", "Juni",
+		"Juli", "Agustus", "September", "Oktober", "November", "Desember"
+	];
+
+	// Ambil komponen tanggal
+	const hariNama = namaHari[d.getDay()];
+	const tanggalTgl = d.getDate();
+	const bulanNama = namaBulan[d.getMonth()];
+	const tahunFull = d.getFullYear();
+  
+	// Format jam dan menit agar selalu 2 digit (misal: 08.05)
+	const jamFull = String(d.getHours()).padStart(2, '0');
+	const menitFull = String(d.getMinutes()).padStart(2, '0');
+	const detikFull = String(d.getSeconds()).padStart(2, '0');
+
+	// Susun hasil akhir: "Rabu, 7 Januari 2026 10:08 WIB"
+	return `${hariNama}, ${tanggalTgl} ${bulanNama} ${tahunFull} ${jamFull}:${menitFull}:${detikFull} WIB`;
+
+};
+</script>
+<script src="../js/back_home.js"></script> <!-- balikKandang(); -->
+</body>
+</html>

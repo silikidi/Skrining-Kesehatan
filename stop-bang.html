@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id-id" style="--document-width: 100vw;--document-height: 100vh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sukma Budi with Gemini">
+<meta name="description" content="Sering mengantuk atau mendengkur? Cek risiko gangguan tidur Anda secara cepat dan gratis dengan metode STOP-BANG di Skrining Online RSUD Cibabat. Mulai tes sekarang!">
+<meta property="og:title" content="RSUD Cibabat - Skrining Gangguan Tidur Dengan STOP-BANG">
+<meta property="og:description" content="Sering mengantuk atau mendengkur? Cek risiko gangguan tidur Anda secara cepat dan gratis dengan metode STOP-BANG di Skrining Online RSUD Cibabat. Mulai tes sekarang!">
+<meta property="og:image" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta property="og:url" content="https://rsudcibabat.cimahikota.go.id/skrining/stop-bang.html">
+<meta property="og:site_name" content="RSUD Cibabat Official Website">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RSUD Cibabat - Skrining Gangguan Tidur Dengan STOP-BANG">
+<meta name="twitter:description" content="Sering mengantuk atau mendengkur? Cek risiko gangguan tidur Anda secara cepat dan gratis dengan metode STOP-BANG di Skrining Online RSUD Cibabat. Mulai tes sekarang!">
+<meta property="twitter:image:src" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta name="twitter:url" content="https://rsudcibabat.cimahikota.go.id/skrining/stop-bang.html">
+<meta name="twitter:site" content="@rscibabat">
+
+<title>RSUD Cibabat - Skrining Gangguan Tidur Dengan STOP-BANG</title>
+
+<link rel="apple-touch-icon" href="../images/logo/rsclogo.png">
+<link rel="icon" type="image/svg+xml" href="../images/logo/rsclogo.webp">
+<link rel="canonical" href="https://rsudcibabat.cimahikota.go.id/skrining/stop-bang.html">
+<link href="./dist/tailwind.css" rel="stylesheet">
+<link href="../css/sweetalert2.min.css" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "RSUD Cibabat - Skrining Gangguan Tidur Dengan STOP-BANG",
+	"description": "Sering mengantuk atau mendengkur? Cek risiko gangguan tidur Anda secara cepat dan gratis dengan metode STOP-BANG di Skrining Online RSUD Cibabat. Mulai tes sekarang!" ,
+	"image": [
+		"../images/logo/rsudcibabatwebmin.jpg"
+	]
+}
+</script>
+<script src="../js/sweetalert2.all.min.js"></script>
+<script src="../js/modern-screenshot4.6.8.min.js"></script>
+<style>
+.bg-image {
+	background-image: url('../images/wallpaper/gradien1-minr.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+.highlight-error { border: 4px solid #ef4444 !important; background-color: #fef2f2; scroll-margin-top: 120px; }
+input[type="radio"]:checked + .choice-box {
+	background-color: #1e3a8a !important; /* Blue-900 */
+	border-color: #1e3a8a !important;
+	color: #ffffff !important;
+}
+
+/* ========== VERTICAL BRAND ========== */
+.vertical-tag {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	pointer-events: none;
+}
+.vertical-tag span {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	white-space: nowrap;
+}
+/* ========== VERTICAL BRAND ========== */
+</style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+<div class="relative max-w-4xl mx-auto py-10">
+
+	<div id="capture-area" class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+
+		<header class="mx-4 mt-4 mb-8">
+			<small class="text-xs leading-none">Instrumen STOP-BANG</small>
+			<h1 class="mb-2 text-xl md:text-2xl text-slate-700 font-black leading-none">Skrining Gangguan Tidur</h1>
+			<p class="text-xs md:text-md text-slate-700 font-semibold uppercase leading-none tracking-widest">Skrining Mandiri RSUD Cibabat</p>
+		</header>
+
+		<div class="mb-6 p-4 border-l-6 bg-[#f2f2f2] border-l-[5px] border-solid border-[#e1e1e1]">
+			<p class="text-sm font-bold mb-2">DISCLAIMER</p>
+			<p class="text-sm leading-tight mb-2">
+				<a href="../kebijakan-privasi.html" target="_blank">Privasi Anda dijamin UU PDP 27 2022</a> proses skrining sepenuhnya berjalan di browser client dan tidak ada data yang dikirim ataupun disimpan di server manapun.
+				Skrining ini merupakan instrumen penyaringan awal dan bukan merupakan diagnosis medis formal. Hasil yang tinggi menunjukkan perlunya evaluasi klinis lebih lanjut dengan <a href="#panel-klinik">Dokter Ahli RSUD Cibabat</a>.
+				<br>
+				Skrining mengacu pada riset <a href="https://doi.org/10.1378/chest.15-0903" target="_blank" rel="noopener noreferrer">Chung F, et al. (2016). STOP-Bang Questionnaire</a> sebagai standar emas skrining Obstructive Sleep Apnea [OSA].
+			</p>
+		</div>
+
+		<div id="questionnaire" class="">
+			<script>
+			const questions = [
+				{ id: 'S', title: 'Mendengkur Keras', desc: 'Apakah suara dengkuran Anda keras lebih keras dari suara bicara' },
+				{ id: 'T', title: 'Sering Lelah', desc: 'Apakah Anda merasa sangat lelah atau mengantuk di siang hari' },
+				{ id: 'O', title: 'Napas Berhenti', desc: 'Apakah ada yang melihat Anda berhenti bernapas saat tidur' },
+				{ id: 'P', title: 'Darah Tinggi', desc: 'Apakah Anda punya darah tinggi atau minum obat darah tinggi' },
+				{ id: 'B', title: 'Berat Badan Lebih', desc: 'Apakah tubuh Anda terasa sangat gemuk [BMI di atas 35]' },
+				{ id: 'A', title: 'Usia Lanjut', desc: 'Apakah usia Anda saat ini 50 tahun atau lebih' },
+				{ id: 'N', title: 'Leher Besar', desc: 'Ukuran kerah baju Pria > 43cm atau Wanita > 41cm' },
+				{ id: 'G', title: 'Jenis Kelamin', desc: 'Apakah jenis kelamin Anda Laki-laki' }
+			];
+			questions.forEach((q, index) => {
+				document.write(`
+					<div id="group-${q.id}" class="p-5 rounded-2xl border-4 border-transparent transition-all duration-200">
+						<div class="mb-2 text-2xl md:text-4xl text-blue-900 font-extrabold leading-tight flex flex-row justify-start items-start gap-[20px]">
+							<div class="w-[10px] md:w-[30px] text-center leading-none">${index + 1}</div>
+							<div class="leading-none w-full">${q.title}</div>
+						</div>
+						<div class="ml-[30px] md:ml-[50px] mb-5 block md:text-2xl font-medium">${q.desc}</div>
+						<div class="grid grid-cols-2 gap-4">
+							<label class="relative cursor-pointer">
+								<input type="radio" name="${q.id}" value="1" class="peer hidden">
+								<div class="choice-box text-center py-4 px-6 border-2 border-gray-300 rounded-xl font-bold text-xl hover:bg-blue-50 hover:border-blue-600 uppercase transition-all">
+									YA
+								</div>
+							</label>
+							<label class="relative cursor-pointer">
+								<input type="radio" name="${q.id}" value="0" class="peer hidden">
+								<div class="choice-box text-center py-4 px-6 border-2 border-gray-300 rounded-xl font-bold text-xl hover:bg-blue-50 hover:border-blue-600 uppercase transition-all">
+									TIDAK
+								</div>
+							</label>
+						</div>
+					</div>
+				`);
+			});
+			</script>
+		</div>
+
+		<div id="result-box" class="hidden mx-6 my-10 p-8 rounded-3xl text-center border-4">
+			<h2 class="text-2xl font-bold">SKOR ANDA</h2>
+			<div id="result-score" class="text-8xl font-black my-4">0</div>
+			<p id="result-level" class="text-4xl md:text-6xl font-black uppercase leading-none"></p>
+			<p id="result-desc" class="text-lg md:text-2xl mt-4 font-medium text-gray-700"></p>
+			<p id="result-date" class="text-xs mt-6 font-medium text-gray-700"></p>
+		</div>
+
+	</div>
+
+	<div class="px-6 md:px-6 mt-10 mb-10 flex flex-col flex-wrap justify-center gap-3 screenshot-target">
+		<button onclick="processResult()" class="px-2 md:px-8 py-5 text-[1.1em] md:text-[1.5em] bg-image font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer">Hitung</button>
+		<div id="screenshot-buttonblock" class="hidden grid grid-cols-2 gap-2">
+			<button onclick="takeScreenshot()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Screenshot</button>
+			<button onclick="shareWA()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Bagikan</button>
+		</div>
+		<div class="grid grid-cols-2 gap-2">
+			<button onclick="resetSurvey()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Reset</button>
+			<button onclick="balikKandang()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Kembali</button>
+		</div>
+	</div>
+
+	<div id="panel-klinik" class="space-y-4 px-8 rounded-2xl bg-image shadow-2xl screenshot-target">
+		<div class="text-[3em] text-black text-center font-black leading-none pt-10">
+			Tenang..
+		</div>
+		<div class="text-[1.2em] md:text-[1.7em] font-semibold text-black text-center leading-tight py-4">
+			Gangguan tidur dapat ditangani secara medis dengan penanganan yang tepat bersama Dokter Ahli RSUD Cibabat
+		</div>
+		<div class="text-[1.3em] md:text-[2.5em] text-black text-center font-black leading-none">
+			Konsultasi Dokter Ahli
+		</div>
+		<div class="grid grid-cols-2 gap-2 pb-20">
+			<button class="px-2 py-4 text-[16px] md:text-[18px] font-bold uppercase leading-none bg-white hover:bg-gray-300 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Janji Temu</button>
+			<button class="px-2 py-4 text-[16px] md:text-[18px] font-bold uppercase leading-none bg-white hover:bg-gray-300 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Profil Layanan</button>
+		</div>
+	</div>
+
+	<!-- VERTICAL BRAND -->
+	<div class="absolute vertical-tag left right-[97%] md:right-[100%] p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+
+	<div class="absolute vertical-tag right left-[97%] md:left-[100%] rotate-180 p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+	<!-- VERTICAL BRAND -->
+
+</div>
+
+<script>
+// Tambahkan fungsi ini untuk menangani perubahan input secara real-time
+function setupInputListeners() {
+    questions.forEach(q => {
+        const inputs = document.querySelectorAll(`input[name="${q.id}"]`);
+        inputs.forEach(input => {
+            input.addEventListener('change', () => {
+                const group = document.getElementById(`group-${q.id}`);
+                // Jika sudah dipilih, langsung hapus highlight error
+                if (input.checked) {
+                    group.classList.remove('highlight-error');
+                }
+            });
+        });
+    });
+}
+
+window.onload = function() {
+	resetSurvey();
+	setupInputListeners(); // Inisialisasi listener
+	Swal.fire({
+		title: '<span style="display: block; color: #1e3a8a; font-size: 30px; font-weight: 700; line-height: 1;">Persiapan Sebelum Skrining</span>',
+		html: `
+			<div class="text-left text-base">
+				<ul class="list-disc ml-5 mb-4 space-y-2">
+					<li class="leading-tight">Mengukur indeks massa tubuh dengan <a href="./bmi.html" target="_self">Kalkulator BMI</a>.</li>
+					<li class="leading-tight">Mengukur <a href="./aset/lingkarleher.png" target="_blank">Lingkar Leher</a> di sekitar jakun.</li>
+				</ul>
+				<div class="bg-gray-100 p-4 rounded-xl text-center">
+					<img src="./aset/lingkarleher.png" class="mx-auto rounded shadow cursor-pointer" onclick="window.open('./aset/lingkarleher.png','_blank');">
+				</div>
+			</div>
+		`,
+		confirmButtonText: 'Saya Siap!',
+		confirmButtonColor: '#1e40af',
+		showDenyButton: true,
+		denyButtonText: 'Kalkulator BMI',
+		denyButtonColor: '#d00000',
+		allowOutsideClick: false
+	}).then((result) => {
+		if (result.isDenied) window.open('./bmi.html', '_self');
+	});
+};
+
+function validateInputs() {
+	let firstUnanswered = null;
+	questions.forEach(q => {
+		const checked = document.querySelector(`input[name="${q.id}"]:checked`);
+		const group = document.getElementById(`group-${q.id}`);
+		if (!checked) {
+			group.classList.add('highlight-error');
+			if (!firstUnanswered) firstUnanswered = group;
+		} else {
+			group.classList.remove('highlight-error');
+		}
+	});
+	return firstUnanswered;
+}
+
+function processResult() {
+	const errorElement = validateInputs();
+	if (errorElement) {
+		Swal.fire({
+			title: 'Data Belum Lengkap',
+			text: 'Mohon pilih "YA" atau "TIDAK" pada bagian yang berwarna merah.',
+			icon: 'warning',
+			returnFocus: false
+		}).then(() => {
+			errorElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		});
+		return;
+	}
+
+	let score = 0;
+	questions.forEach(q => {
+		score += parseInt(document.querySelector(`input[name="${q.id}"]:checked`).value);
+	});
+
+	const resBox = document.getElementById('result-box');
+	resBox.classList.remove('hidden', 'bg-green-100', 'bg-yellow-100', 'bg-red-100', 'border-green-600', 'border-yellow-600', 'border-red-600');
+
+	document.getElementById('result-score').innerText = score;
+	const level = document.getElementById('result-level');
+	const desc = document.getElementById('result-desc');
+
+	if (score <= 2) {
+		level.innerText = "RISIKO RENDAH";
+		resBox.classList.add('bg-green-100', 'text-green-900', 'border-green-600');
+		desc.innerText = "Kualitas pernapasan tidur Anda kemungkinan besar normal.";
+	} else if (score <= 4) {
+		level.innerText = "RISIKO MENENGAH";
+		resBox.classList.add('bg-yellow-100', 'text-yellow-900', 'border-yellow-600');
+		desc.innerText = "Waspada, Anda mungkin mengalami gangguan tidur. Disarankan konsultasi.";
+	} else {
+		level.innerText = "RISIKO TINGGI";
+		resBox.classList.add('bg-red-100', 'text-red-900', 'border-red-600');
+		desc.innerHTML = 'Sangat disarankan segera ke <a href="#panel-klinik">Dokter Ahli RSUD Cibabat</a>';
+	}
+
+	const tglSekarang = new Date().toLocaleString('id-ID');
+	document.getElementById('result-date').innerText = tglIndonesiaFormat(tglSekarang);
+
+	document.getElementById('screenshot-buttonblock').classList.remove('hidden');
+	resBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function takeScreenshot() {
+	const area = document.getElementById('capture-area');
+	Swal.fire({ title: 'Menyiapkan Gambar...', didOpen: () => Swal.showLoading() });
+
+	modernScreenshot.domToPng(area, { backgroundColor: '#ffffff', scale: 2 })
+	.then(dataUrl => {
+		const link = document.createElement('a');
+		link.download = `Hasil-Skrining-RSUD-Cibabat.png`;
+		link.href = dataUrl;
+		link.click();
+		Swal.close();
+	});
+}
+
+function resetSurvey() {
+	document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+	document.querySelectorAll('[id^="group-"]').forEach(el => el.classList.remove('highlight-error'));
+	document.getElementById('result-box').classList.add('hidden');
+	document.getElementById('screenshot-buttonblock').classList.add('hidden');
+
+    setTimeout(() => {
+        //resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 200);
+	
+}
+
+function shareWA() {
+	window.open(`https://api.whatsapp.com/send?text=Cek risiko gangguan tidur di RSUD Cibabat: ${encodeURIComponent(window.location.href)}`, '_blank');
+}
+
+
+const tglIndonesiaFormat = (tanggal) => {
+
+	let d;
+
+	if (tanggal instanceof Date && !isNaN(tanggal)) {
+		d = tanggal;
+	} else if (typeof tanggal === 'string') {
+		// Memisahkan "07/01/2026, 10.08.26"
+		const [tglPart, jamPart] = tanggal.split(', ');
+		const [hari, bulan, tahun] = tglPart.split('/');
+		const [jam, menit, detik] = jamPart ? jamPart.split('.') : [0, 0, 0];
+
+		d = new Date(tahun, bulan - 1, hari, jam, menit, detik);
+	}
+
+	if (!d || isNaN(d.getTime())) return "Format Tidak Valid";
+
+	// Array nama hari dan bulan dalam Bahasa Indonesia
+	const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+	const namaBulan = [
+		"Januari", "Februari", "Maret", "April", "Mei", "Juni",
+		"Juli", "Agustus", "September", "Oktober", "November", "Desember"
+	];
+
+	// Ambil komponen tanggal
+	const hariNama = namaHari[d.getDay()];
+	const tanggalTgl = d.getDate();
+	const bulanNama = namaBulan[d.getMonth()];
+	const tahunFull = d.getFullYear();
+  
+	// Format jam dan menit agar selalu 2 digit (misal: 08.05)
+	const jamFull = String(d.getHours()).padStart(2, '0');
+	const menitFull = String(d.getMinutes()).padStart(2, '0');
+	const detikFull = String(d.getSeconds()).padStart(2, '0');
+
+	// Susun hasil akhir: "Rabu, 7 Januari 2026 10:08 WIB"
+	return `${hariNama}, ${tanggalTgl} ${bulanNama} ${tahunFull} ${jamFull}:${menitFull}:${detikFull} WIB`;
+
+};
+</script>
+<script src="../js/back_home.js"></script> <!-- balikKandang(); -->
+</body>
+</html>

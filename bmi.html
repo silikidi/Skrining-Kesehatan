@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id-id" style="--document-width: 100vw;--document-height: 100vh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sukma Budi with Gemini">
+<meta name="description" content="Cari tahu apakah Anda termasuk kategori normal, overweight, atau obesitas dalam hitungan detik dengan kalkulator BMI praktis dan gratis.">
+<meta property="og:title" content="RSUD Cibabat - Berat Badan Ideal Dengan Kalkulator BMI">
+<meta property="og:description" content="Cari tahu apakah Anda termasuk kategori normal, overweight, atau obesitas dalam hitungan detik dengan kalkulator BMI praktis dan gratis.">
+<meta property="og:image" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta property="og:url" content="https://rsudcibabat.cimahikota.go.id/skrining/bmi.html">
+<meta property="og:site_name" content="RSUD Cibabat Official Website">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RSUD Cibabat - Berat Badan Ideal Dengan Kalkulator BMI">
+<meta name="twitter:description" content="Cari tahu apakah Anda termasuk kategori normal, overweight, atau obesitas dalam hitungan detik dengan kalkulator BMI praktis dan gratis.">
+<meta property="twitter:image:src" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta name="twitter:url" content="https://rsudcibabat.cimahikota.go.id/skrining/bmi.html">
+<meta name="twitter:site" content="@rscibabat">
+
+<title>RSUD Cibabat - Berat Badan Ideal Dengan Kalkulator BMI</title>
+
+<link rel="apple-touch-icon" href="../images/logo/rsclogo.png">
+<link rel="icon" type="image/svg+xml" href="../images/logo/rsclogo.webp">
+<link rel="canonical" href="https://rsudcibabat.cimahikota.go.id/skrining/bmi.html">
+<link href="./dist/tailwind.css" rel="stylesheet">
+<link href="../css/sweetalert2.min.css" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "RSUD Cibabat - Berat Badan Ideal Dengan Kalkulator BMI",
+	"description": "Cari tahu apakah Anda termasuk kategori normal, overweight, atau obesitas dalam hitungan detik dengan kalkulator BMI praktis dan gratis." ,
+	"image": [
+		"../images/logo/rsudcibabatwebmin.jpg"
+	]
+}
+</script>
+<script src="../js/sweetalert2.all.min.js"></script>
+<script src="../js/modern-screenshot4.6.8.min.js"></script>
+<style>
+body {
+	/*KETAJAMAN FONT*/
+	text-shadow: 0 0 1px rgba(0,0,0,0.01) !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+}
+.bg-image {
+	background-image: url('../images/wallpaper/gradien1-minr.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+.highlight-error {
+	outline: 4px solid #ef4444;
+	border-radius: 0.5rem;
+	transition: all 0.3s;
+}
+
+/* ========== VERTICAL BRAND ========== */
+.vertical-tag {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	pointer-events: none;
+}
+.vertical-tag span {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	white-space: nowrap;
+}
+/* ========== VERTICAL BRAND ========== */
+</style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-900 leading-normal">
+
+<div id="main-content" class="relative max-w-2xl mx-auto my-10 p-4">
+
+	<div id="capture-area" class="p-4 bg-white rounded-3xl shadow-xl border-2 border-green-600">
+
+		<header class="mt-4 mb-8 text-center">
+			<h1 class="mb-1 text-2xl md:text-6xl font-extrabold text-green-700 leading-none tracking-tight">Kalkulator BMI</h1>
+			<p class="text-xs md:text-[18px] text-gray-600 font-medium uppercase leading-none tracking-widest">Skrining Mandiri RSUD Cibabat</p>
+		</header>
+
+        <div id="form-skrining" class="space-y-8 mb-4">
+            <div id="group-weight" class="md:px-4 transition-all">
+                <label for="weight" class="mb-2 block text-2xl font-bold text-center md:text-left">Berapa Berat Badan Anda [kg]</label>
+                <input type="number" id="weight" placeholder="Misal: 70" class="w-full p-5 text-2xl border-4 border-gray-300 rounded-xl focus:border-green-500 outline-none">
+            </div>
+
+            <div id="group-height" class="md:px-4 transition-all">
+                <label for="height" class="mb-2 block text-2xl font-bold text-center md:text-left">Berapa Tinggi Badan Anda [cm]</label>
+                <input type="number" id="height" placeholder="Misal: 165" class="w-full p-5 text-2xl border-4 border-gray-300 rounded-xl focus:border-green-500 outline-none">
+            </div>
+        </div>
+
+        <div id="result-panel" class="hidden my-10 mx-6 p-6 bg-green-50 border-4 border-green-500 rounded-2xl text-center">
+            <p class="text-xl md:text-3xl font-semibold">Skor BMI Anda</p>
+            <div id="result-score" class="my-4 text-6xl font-black text-green-700">0.0</div>
+            <div id="result-status"></div>
+            <p id="result-advice" class="md:text-2xl text-gray-700 font-medium leading-tight"></p>
+            <p id="result-date" class="mt-6 text-xs text-gray-700 font-medium leading-tight"></p>
+        </div>
+	</div>
+
+	<div class="mt-8 space-y-4">
+		<div class="grid grid-cols-1">
+			<button onclick="processResult()" class="py-5 bg-green-600 text-white text-2xl font-bold rounded-2xl hover:bg-green-700 shadow-lg flex items-center justify-center gap-2">
+				Hitung BMI
+			</button>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+			<button onclick="takeScreenshot()" id="btn-screenshot" class="py-4 opacity-50 cursor-not-allowed bg-white hover:bg-gray-300 text-xl font-bold rounded-2xl shadow-lg flex items-center justify-center gap-2" disabled>
+				Screenshot
+			</button>
+			<button onclick="shareWA()" class="py-4 bg-white hover:bg-gray-300 text-xl font-bold rounded-2xl shadow-md">
+				Bagikan
+			</button>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+			<button onclick="resetSurvey()" class="bg-white hover:bg-gray-300 text-xl font-bold py-4 rounded-2xl shadow-md">
+				Reset Ulangi
+			</button>
+			<button onclick="balikKandang()" class="bg-white hover:bg-gray-300 text-xl font-bold py-4 rounded-2xl shadow-md">
+				Kembali
+			</button>
+		</div>
+	</div>
+
+	<div class="mt-12 p-8 bg-blue-900 text-white rounded-3xl shadow-2xl">
+        <h2 class="mb-4 text-2xl md:text-3xl font-bold">Konsultasi Ahli Gizi</h2>
+        <p class="mb-6 text-xl text-blue-100 leading-none">Diet yang benar itu penting. Diet yang tepat lebih penting!</p>
+        <div class="flex flex-col md:flex-row gap-4">
+            <button class="flex-1 bg-white text-blue-900 text-center font-bold py-4 rounded-xl text-xl hover:bg-gray-300 transition-colors">Janji Temu</button>
+            <button class="flex-1 border-2 border-white text-white text-center font-bold py-4 rounded-xl text-xl hover:bg-blue-800 transition-colors">Profil Layanan</button>
+        </div>
+    </div>
+
+    <div class="mt-10 p-6 bg-gray-200 rounded-2xl text-sm text-gray-700 border-l-8 border-gray-400">
+        <h3 class="mb-2 font-bold text-lg leading-none">Disclaimer</h3>
+        <p class="mb-4">Alat ini adalah instrumen skrining awal dan bukan pengganti diagnosis medis profesional. Interpretasi BMI pada lansia memerlukan pertimbangan komposisi tubuh yang berbeda dari dewasa muda.</p>
+        <p class="font-bold uppercase mb-1 text-xs">Sumber Referensi</p>
+        <ul class="list-disc ml-5 text-xs space-y-1">
+            <li>World Health Organization (WHO) - <a href="https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/body-mass-index" target="_blank" rel="noopener noreferrer">Body Mass Index Guidelines</a>.</li>
+            <li>Kementerian Kesehatan RI - <a href="https://keslan.kemkes.go.id/unduhan/KMK%20No.%20HK.01.07-MENKES-509-2025.pdf" target="_blank" rel="noopener noreferrer">Tata Laksana Obesitas Dewasa</a>.</li>
+            <li>The American Journal of Clinical Nutrition - <a href="https://doi.org/10.3945/ajcn.113.068122" target="_blank" rel="noopener noreferrer">BMI and all-cause mortality in older adults</a>.</li>
+        </ul>
+    </div>
+
+	<!-- VERTICAL BRAND -->
+	<div class="absolute vertical-tag left right-[97%] md:right-[100%] p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+
+	<div class="absolute vertical-tag right left-[97%] md:left-[100%] rotate-180 p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+	<!-- VERTICAL BRAND -->
+
+</div>
+
+<script>
+const btnScreenshot = document.getElementById('btn-screenshot');
+
+function validateInputs() {
+	const weightInput = document.getElementById('weight');
+	const heightInput = document.getElementById('height');
+	let isValid = true;
+
+	// Reset highlight
+	document.getElementById('group-weight').classList.remove('highlight-error');
+	document.getElementById('group-height').classList.remove('highlight-error');
+
+	// Validasi Tinggi
+	if (!heightInput.value || heightInput.value <= 0) {
+		document.getElementById('group-height').classList.add('highlight-error');
+		heightInput.focus();
+		isValid = false;
+	}
+
+	// Validasi Berat
+	if (!weightInput.value || weightInput.value <= 0) {
+		document.getElementById('group-weight').classList.add('highlight-error');
+		weightInput.focus();
+		isValid = false;
+	}
+
+	if (!isValid) {
+		Swal.fire({
+			title: 'Data Belum Lengkap!',
+			text: 'Harap isi kolom berat dan tinggi badan terlebih dahulu.',
+			icon: 'warning',
+			confirmButtonColor: '#2e7d32'
+		});
+	}
+	return isValid;
+}
+
+function processResult() {
+	if (!validateInputs()) return;
+
+	const w = parseFloat(document.getElementById('weight').value);
+	const h = parseFloat(document.getElementById('height').value) / 100;
+	const bmi = (w / (h * h)).toFixed(1);
+
+	const scoreEl = document.getElementById('result-score');
+	const statusEl = document.getElementById('result-status');
+	const adviceEl = document.getElementById('result-advice');
+	const panel = document.getElementById('result-panel');
+
+	scoreEl.innerText = bmi;
+	panel.classList.remove('hidden');
+
+	let status, color, advice;
+
+	if (bmi < 22) {
+		status = "RISIKO KURANG GIZI";
+		color = "bg-orange-500";
+		advice = "Disarankan meningkatkan asupan protein dan nutrisi padat.";
+	} else if (bmi >= 22 && bmi <= 27) {
+		status = "SANGAT IDEAL [SEHAT]";
+		color = "bg-green-600";
+		advice = "Kondisi sangat baik! Pertahankan pola hidup aktif Anda.";
+	} else if (bmi > 27 && bmi <= 30) {
+		status = "KELEBIHAN BERAT BADAN";
+		color = "bg-orange-400";
+		advice = "Perhatikan asupan gula dan lemak, perbanyak aktivitas jalan kaki.";
+	} else {
+		status = "OBESITAS";
+		color = "bg-red-600";
+		advice = "Konsultasikan dengan dokter untuk menjaga kesehatan jantung dan sendi.";
+	}
+
+	statusEl.innerText = status;
+	statusEl.className = `mb-4 px-4 py-2 text-3xl md:text-4xl font-bold inline-block rounded-lg uppercase leading-none text-white ${color}`;
+	adviceEl.innerText = advice;
+
+	const tglSekarang = new Date().toLocaleString('id-ID');
+	document.getElementById('result-date').innerText = tglIndonesiaFormat(tglSekarang);
+
+	// Aktifkan tombol screenshot
+	btnScreenshot.classList.remove('opacity-50', 'cursor-not-allowed');
+	btnScreenshot.classList.add('hover:bg-blue-700');
+	btnScreenshot.disabled = false;
+
+	panel.scrollIntoView({ behavior: 'smooth' });
+
+	Swal.fire({
+		title: 'Berhasil Dihitung',
+		icon: 'success',
+		timer: 1500,
+		showConfirmButton: false
+	});
+}
+
+async function takeScreenshot() {
+	// Double check validasi sebelum screenshot
+	if (!validateInputs()) return;
+
+	const element = document.getElementById('capture-area');
+	Swal.fire({
+		title: 'Menyiapkan Gambar...',
+		allowOutsideClick: false,
+		didOpen: () => { Swal.showLoading() }
+	});
+
+	try {
+		const dataUrl = await modernScreenshot.domToPng(element, { scale: 2 });
+		const link = document.createElement('a');
+		link.download = `Hasil_Skrining_Lansia_${new Date().getTime()}.png`;
+		link.href = dataUrl;
+		link.click();
+		Swal.close();
+		Swal.fire('Tersimpan!', 'Gambar telah berhasil diunduh.', 'success');
+	} catch (error) {
+		console.error(error);
+		Swal.close();
+		Swal.fire('Gagal!', 'Terjadi kesalahan sistem saat menyimpan gambar.', 'error');
+	}
+}
+
+function resetSurvey() {
+	document.getElementById('weight').value = '';
+	document.getElementById('height').value = '';
+	document.getElementById('result-panel').classList.add('hidden');
+
+	// Disable tombol screenshot kembali
+	btnScreenshot.classList.add('opacity-50', 'cursor-not-allowed');
+	btnScreenshot.classList.remove('hover:bg-blue-700');
+	btnScreenshot.disabled = true;
+
+	document.getElementById('group-weight').classList.remove('highlight-error');
+	document.getElementById('group-height').classList.remove('highlight-error');
+
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+	Swal.fire('Dibersihkan', 'Formulir kembali ke awal.', 'info');
+}
+
+function shareWA() {
+	const text = encodeURIComponent("Halo, mari cek kesehatan BMI khusus lansia di tautan ini: " + window.location.href);
+	window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+}
+
+
+const tglIndonesiaFormat = (tanggal) => {
+
+	let d;
+
+	if (tanggal instanceof Date && !isNaN(tanggal)) {
+		d = tanggal;
+	} else if (typeof tanggal === 'string') {
+		// Memisahkan "07/01/2026, 10.08.26"
+		const [tglPart, jamPart] = tanggal.split(', ');
+		const [hari, bulan, tahun] = tglPart.split('/');
+		const [jam, menit, detik] = jamPart ? jamPart.split('.') : [0, 0, 0];
+
+		d = new Date(tahun, bulan - 1, hari, jam, menit, detik);
+	}
+
+	if (!d || isNaN(d.getTime())) return "Format Tidak Valid";
+
+	// Array nama hari dan bulan dalam Bahasa Indonesia
+	const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+	const namaBulan = [
+		"Januari", "Februari", "Maret", "April", "Mei", "Juni",
+		"Juli", "Agustus", "September", "Oktober", "November", "Desember"
+	];
+
+	// Ambil komponen tanggal
+	const hariNama = namaHari[d.getDay()];
+	const tanggalTgl = d.getDate();
+	const bulanNama = namaBulan[d.getMonth()];
+	const tahunFull = d.getFullYear();
+  
+	// Format jam dan menit agar selalu 2 digit (misal: 08.05)
+	const jamFull = String(d.getHours()).padStart(2, '0');
+	const menitFull = String(d.getMinutes()).padStart(2, '0');
+	const detikFull = String(d.getSeconds()).padStart(2, '0');
+
+	// Susun hasil akhir: "Rabu, 7 Januari 2026 10:08 WIB"
+	return `${hariNama}, ${tanggalTgl} ${bulanNama} ${tahunFull} ${jamFull}:${menitFull}:${detikFull} WIB`;
+
+};
+</script>
+<script src="../js/back_home.js"></script> <!-- balikKandang(); -->
+</body>
+</html>

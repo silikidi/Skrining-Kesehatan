@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="id-id" style="--document-width: 100vw;--document-height: 100vh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sukma Budi with Gemini">
+<meta name="description" content="Skrining Online Kanker Payudara RSUD Cibabat. Deteksi dini gejala dan risiko kanker payudara Anda dengan cepat, mudah, dan gratis di sini!">
+<meta property="og:title" content="RSUD Cibabat - Skrining Kanker Payudara Dengan GAIL-SADARI">
+<meta property="og:description" content="Skrining Online Kanker Payudara RSUD Cibabat. Deteksi dini gejala dan risiko kanker payudara Anda dengan cepat, mudah, dan gratis di sini!">
+<meta property="og:image" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta property="og:url" content="https://rsudcibabat.cimahikota.go.id/skrining/kanker-payudara.html">
+<meta property="og:site_name" content="RSUD Cibabat Official Website">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RSUD Cibabat - Skrining Kanker Payudara Dengan GAIL-SADARI">
+<meta name="twitter:description" content="Skrining Online Kanker Payudara RSUD Cibabat. Deteksi dini gejala dan risiko kanker payudara Anda dengan cepat, mudah, dan gratis di sini!">
+<meta property="twitter:image:src" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta name="twitter:url" content="https://rsudcibabat.cimahikota.go.id/skrining/kanker-payudara.html">
+<meta name="twitter:site" content="@rscibabat">
+
+<title>RSUD Cibabat - Skrining Kanker Payudara Dengan GAIL-SADARI</title>
+
+<link rel="apple-touch-icon" href="../images/logo/rsclogo.png">
+<link rel="icon" type="image/svg+xml" href="../images/logo/rsclogo.webp">
+<link rel="canonical" href="https://rsudcibabat.cimahikota.go.id/skrining/kanker-payudara.html">
+<link href="./dist/tailwind.css" rel="stylesheet">
+<link href="../css/sweetalert2.min.css" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "RSUD Cibabat - Skrining Kanker Payudara Dengan GAIL-SADARI",
+	"description": "Skrining Online Kanker Payudara RSUD Cibabat. Deteksi dini gejala dan risiko kanker payudara Anda dengan cepat, mudah, dan gratis di sini!",
+	"image": [
+		"../images/logo/rsudcibabatwebmin.jpg"
+	]
+}
+</script>
+<link rel="stylesheet" href="./dist/tailwind.css">
+<link href="../css/sweetalert2.min.css" rel="stylesheet">
+<script src="../js/modern-screenshot4.6.8.min.js"></script>
+<script src="../js/sweetalert2.all.min.js"></script>
+<style>
+.bg-image {
+	background-image: url('../images/wallpaper/gradien1-minr.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+.fade-in { animation: fadeIn 0.4s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.progress-bar { transition: width 0.4s ease-in-out; }
+.option-card:hover { transform: scale(1.01); }
+
+/* ========== VERTICAL BRAND ========== */
+.vertical-tag {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	pointer-events: none;
+}
+.vertical-tag span {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	white-space: nowrap;
+}
+/* ========== VERTICAL BRAND ========== */
+</style>
+</head>
+<body class="bg-gray-100 min-h-screen py-6 px-4 font-sans text-gray-900">
+
+<div class="relative container mx-auto max-w-xl">
+    
+	<!-- BLOK HEADER-->
+	<div class="flex items-center gap-0 md:gap-4 mb-6 bg-white p-4 rounded-2xl shadow-sm border border-teal-100">
+        <!--
+		<div class="w-12 h-12 flex items-center justify-center text-white font-bold text-2xl"></div>
+		-->
+		<img src="../images/logo/rsudcibabatcircle.png" alt="" class="hidden md:block w-12 h-auto hover:scale-105 transition duration-500 cursor-pointer" onclick="balikKandang();">
+        <div class="flex-1">
+            <h1 class="mb-1 text-[18px] text-black font-bold leading-none">Skrining Kanker Payudara</h1>
+            <p class="text-xs text-gray-500 font-medium leading-none uppercase tracking-widest">Skrining Mandiri RSUD Cibabat</p>
+        </div>
+		<button onclick="balikKandang();" class="hidden md:block flex-none px-4 py-2 border-2 border-teal-600 text-teal-600 font-bold rounded-xl hover:bg-teal-50 transition cursor-pointer">Kembali</button>
+		<span onclick="balikKandang();" class="md:hidden p-1 cursor-pointer">❌</span>
+	</div>
+
+	<!-- BLOK SKRINING-->
+	<div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+
+		<div id="step1" class="step p-4">
+			<h2 class="text-2xl font-bold text-center text-gray-800 leading-none mb-4">Kami Bersama Anda</h2>
+            <div class="bg-teal-50 border-l-4 border-teal-500 p-5 mb-6">
+				<p class="text-teal-900 text-md leading-relaxed">
+					<a href="../kebijakan-privasi.html" target="_blank">Privasi Anda dijamin UU PDP 27 2022</a> proses skrining sepenuhnya berjalan di browser client dan tidak ada data yang dikirim ataupun disimpan di server manapun.
+					<br><br>
+					Melakukan skrining mandiri adalah langkah berani untuk kesehatan Anda dan perlu Kami apresiasi.<br><br>
+					Apapun hasilnya Anda sudah membuktikan tekad yang kuat! dan Kami hadir di sini untuk mendampingi Anda.
+				</p>
+			</div>
+			<button onclick="nextStep(2)" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 rounded-2xl transition-all shadow-lg active:scale-95 cursor-pointer">Mulai Skrining</button>
+		</div>
+
+		<div id="step2" class="step hidden p-4 fade-in">
+			<h3 class="text-center text-xl font-bold text-gray-800 mb-2 tracking-widest">PERSIAPAN</h3>
+			<p class="text-center text-xs text-gray-500 mb-6 font-medium uppercase tracking-wider">Lakukan pemeriksaan ini di depan cermin sebelum mengisi form</p>
+            
+			<div class="grid grid-cols-2 gap-3 mb-6">
+				<div class="bg-gray-50 p-3 rounded-xl border border-gray-100 text-[1em] leading-tight">
+					<span class="text-[1.1em] font-bold text-teal-600 leading-none block mb-2">1. Amati</span> Simetrisitas dan warna kulit payudara di depan cermin.
+				</div>
+				<div class="bg-gray-50 p-3 rounded-xl border border-gray-100 text-[1em] leading-tight">
+					<span class="text-[1.1em] font-bold text-teal-600 leading-none block mb-2">2. Angkat Tangan</span> Cek apakah ada cekungan atau kerutan di kulit.
+				</div>
+				<div class="bg-gray-50 p-3 rounded-xl border border-gray-100 text-[1em] leading-tight">
+					<span class="text-[1.1em] font-bold text-teal-600 leading-none block mb-2">3. Raba (Memutar)</span> Gunakan 3 ujung jari, raba benjolan atau penebalan.
+				</div>
+				<div class="bg-gray-50 p-3 rounded-xl border border-gray-100 text-[1em] leading-tight">
+					<span class="text-[1.1em] font-bold text-teal-600 leading-none block mb-2">4. Pencet Puting</span> Lihat apakah ada cairan atau darah tidak normal.
+				</div>
+			</div>
+
+			<div class="cursor-pointer overflow-hidden rounded-xl border border-gray-200 mb-4" onclick="viewInfographic()">
+				<img id="posterImg" src="./aset/sadari-infografis.png" alt="" class="w-full h-auto hover:scale-105 transition duration-500">
+				<div class="bg-gray-800 text-white text-center py-2 text-[10px] font-medium uppercase">PROMKES RSUD CIBABAT</div>
+			</div>
+
+			<div class="text-center text-[1.1em] text-green-800 mb-4 leading-tight bg-green-100 p-4 rounded-xl border border-green-200">
+				<span class="font-bold mb-2 block">Tips Kemenkes</span>Lakukan hari ke-7 s/d 10 setelah hari pertama haid, saat payudara paling lunak.
+			</div>
+
+			<button onclick="nextStep(3)" class="w-full bg-teal-600 text-white font-bold py-4 rounded-2xl shadow-lg cursor-pointer">Saya Sudah Melakukan Cek</button>
+		</div>
+
+		<div id="step3" class="step hidden p-4">
+            <div class="w-full bg-gray-100 rounded-full h-2 mb-4">
+				<div id="progressBar" class="bg-teal-600 h-2 rounded-full progress-bar" style="width: 0%"></div>
+            </div>
+            <div class="flex justify-between items-center mb-6">
+				<span id="progressText" class="text-xs font-bold text-teal-600 uppercase"></span>
+				<button onclick="resetApp()" class="text-xs text-red-500 hover:text-red-700 transition cursor-pointer">RESET</button>
+            </div>
+
+            <div id="questionWrapper" class="fade-in min-h-[300px]">
+				<div id="questionContainer" class="space-y-4"></div>
+            </div>
+
+            <div class="mt-8 flex gap-3">
+				<button id="btnBack" onclick="prevQuestion()" class="flex-1 py-3 border-2 border-teal-600 text-teal-600 font-bold rounded-xl hidden hover:bg-teal-50 transition cursor-pointer">Kembali</button>
+				<button id="btnNext" onclick="validateAndNext()" class="flex-[2] py-3 bg-teal-600 text-white font-bold rounded-xl shadow-lg hover:bg-teal-700 transition cursor-pointer">Lanjut</button>
+            </div>
+		</div>
+
+		<div id="step4" class="step hidden p-4">
+			<div id="captureArea">
+				<div class="mb-6 flex flex-row items-center justify-start gap-2 border-b border-gray-100">
+					<img src="../images/logo/rsudcibabatcircle.png" alt="" class="w-12 h-auto hover:scale-105 transition duration-500 cursor-pointer" onclick="balikKandang();">
+					<div>
+						<h3 class="font-bold text-gray-800 text-md">Skrining Kanker Payudara</h3>
+						<p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Skrining Mandiri RSUD Cibabat</p>
+					</div>
+				</div>
+
+				<p id="captureDate" class="text-[0.8em] text-center text-gray-400"></p>
+				<div id="resultBox" class="p-4 mb-4 text-[1.5em] text-center font-bold leading-none border rounded-xl"></div>
+				<p id="resultAdvice" class="px-4 mb-6 text-[1.1em] text-center text-gray-600 leading-tight"></p>
+                
+				<div class="p-2 bg-gray-50 rounded-xl border border-gray-100">
+					<p class="pb-1 mb-3 text-center text-[1em] font-bold uppercase tracking-widest border-b border-teal-100">Rincian Skrining</p>
+					<div id="detailedAnswers" class="space-y-2"></div>
+				</div>
+
+				<p class="p-4 mt-6 text-[0.9em] text-gray-500 text-center leading-tight">
+					*Hasil sistem otomatis, bukan diagnosa final medis.<br>
+					Harap bawa hasil ini saat berkonsultasi di RSUD Cibabat.
+				</p>
+			</div>
+
+			<div class="p-4 mt-8 space-y-3">
+				<button id="btnExport" onclick="exportToPNG()" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl shadow-lg transition-all active:scale-95 cursor-pointer">
+					Screenshot
+				</button>
+				<button onclick="resetApp()" class="w-full py-4 hover:bg-blue-100 rounded-2xl shadow-lg cursor-pointer border border-2 border-blue-200">Mulai Skrining Baru</button>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- BLOK FOOTER -->
+	<div class="container mx-auto max-w-xl mt-8 space-y-6 mb-20">
+    
+		<div class="bg-white p-6 rounded-3xl shadow-md border border-teal-50">
+			<h4 class="text-center font-bold text-teal-800 mb-4 uppercase text-xl tracking-widest">DOKTER AHLI KANKER</h4>
+			<p class="text-center leading-tight text-md mb-6">
+				<span class="font-bold">Tetap Tenang..</span><br>Kami memiliki Dokter Ahli berpengalaman yang memahami beban yang Anda hadapi
+			</p>
+			<div class="grid grid-cols-2 gap-3">
+				<a href="javascript:void();" class="bg-teal-600 text-white text-center py-3 rounded-xl font-bold text-sm hover:bg-teal-700 transition">Janji Temu</a>
+				<button onclick="showInfoService()" class="border-2 border-teal-600 text-teal-600 py-3 rounded-xl font-bold text-sm hover:bg-teal-50 transition cursor-pointer">Profil Layanan</button>
+			</div>
+		</div>
+
+		<div class="bg-white p-6 rounded-3xl shadow-md border border-gray-100">
+			<h4 class="text-center font-bold text-gray-800 mb-4 uppercase text-sm tracking-widest">PROMKES SADARI</h4>
+			<div class="flex gap-4">
+				<button onclick="playVideo()" class="flex-1 flex flex-col items-center p-4 rounded-2xl shadow-xl border border-gray-200 group transition hover:bg-gray-100 cursor-pointer">
+					<span class="text-3xl mb-1 group-hover:scale-110 transition">🎬</span>
+					<span class="text-[10px] font-bold ">CHANNEL</span>
+				</button>
+				<button onclick="playPodcast()" class="flex-1 flex flex-col items-center p-4 rounded-2xl shadow-xl border border-gray-200 group transition hover:bg-gray-100 cursor-pointer">
+					<span class="text-3xl mb-1 group-hover:scale-110 transition">🎙️</span>
+					<span class="text-[10px] font-bold">PODCAST</span>
+				</button>
+			</div>
+		</div>
+
+			<div class="bg-white p-6 rounded-3xl shadow-md border border-gray-100">
+			<div class="cursor-pointer overflow-hidden rounded-xl border border-gray-200" onclick="viewInfographic()">
+				<img id="posterImg" src="./aset/sadari-infografis.png" alt="" class="w-full h-auto hover:scale-105 transition duration-500">
+				<div class="bg-gray-800 text-white text-center py-2 text-[10px] font-medium uppercase">PROMKES RSUD CIBABAT</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- VERTICAL BRAND -->
+	<div class="absolute vertical-tag left right-[97%] md:right-[100%] p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+
+	<div class="absolute vertical-tag right left-[97%] md:left-[100%] rotate-180 p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+	<!-- VERTICAL BRAND -->
+	
+</div>
+<script>
+const urlVideo = './aset/sadari-video.mp4';
+const urlPodcast = './aset/sadari-podcast.mp3';
+const urlYoutube = 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+
+const questions = [
+    // --- RIWAYAT REPRODUKSI & BIOPSI (GAIL MODEL) ---
+    { id: 'q1', q: "Berapa usia Anda saat ini ?", options: ["< 35 tahun", "35 - 50 tahun", "> 50 tahun"], score: [0, 1, 2] },
+    { id: 'q2', q: "Usia saat pertama kali menstruasi ?", options: ["< 12 tahun", "12 - 13 tahun", "≥ 14 tahun"], score: [2, 1, 0] },
+    { id: 'q3', q: "Status persalinan anak pertama:", options: ["Belum melahirkan / Usia > 30 thn", "Usia < 30 thn"], score: [2, 0] },
+    { id: 'q4', q: "Pernah menjalani biopsi payudara ?", options: ["Tidak pernah", "Pernah (1 kali)", "Pernah (> 1 kali)"], score: [0, 1, 2] },
+    { id: 'q5', q: "Jika pernah, ada sel 'Atypical Hyperplasia' ?", options: ["Tidak / Tidak Tahu", "Ya", "Belum pernah biopsi"], score: [0, 3, 0] },
+    { id: 'q6', q: "Ada riwayat kanker payudara di keluarga inti ?", options: ["Tidak ada", "1 orang", "Lebih dari 1 orang"], score: [0, 3, 5] },
+
+    // --- GEJALA FISIK (SADARI - STANDAR KEMENKES) ---
+    { 
+        id: 'q7', 
+        q: "Apakah terasa ada benjolan keras di payudara atau ketiak ?", 
+        options: ["Ya", "Tidak"], 
+        score: [100, 0] 
+    },
+    { 
+        id: 'q8', 
+        q: "Apakah ada cairan [darah atau bening] keluar dari puting saat dipencet ?", 
+        options: ["Ya", "Tidak"], 
+        score: [100, 0] 
+    },
+    { 
+        id: 'q9', 
+        q: "Apakah ada perubahan kulit [mengerut atau seperti kulit jeruk] atau puting tertarik ke dalam ?", 
+        options: ["Ya", "Tidak"], 
+        score: [100, 0] 
+    }
+];
+
+let currentIdx = 0;
+let userAnswers = [];
+
+function nextStep(step) {
+	document.querySelectorAll('.step').forEach(s => s.classList.add('hidden'));
+	document.getElementById('step' + step).classList.remove('hidden');
+	if(step === 3) renderQuestion();
+}
+
+function renderQuestion() {
+	const wrapper = document.getElementById('questionWrapper');
+	wrapper.classList.remove('fade-in');
+	void wrapper.offsetWidth; 
+	wrapper.classList.add('fade-in');
+
+	const q = questions[currentIdx];
+	document.getElementById('progressBar').style.width = ((currentIdx + 1) / questions.length * 100) + '%';
+	document.getElementById('progressText').innerText = `Langkah ${currentIdx + 1} dari ${questions.length}`;
+        
+	let html = `<p class="text-xl font-bold text-gray-800 mb-5 leading-snug">${q.q}</p>`;
+	q.options.forEach((opt, i) => {
+		const isSelected = userAnswers[currentIdx]?.optionIndex === i;
+		const activeClass = isSelected ? 'border-teal-500 bg-teal-50 ring-2 ring-teal-100' : 'border-gray-100 bg-gray-50';
+		html += `
+			<div onclick="selectOption(${i})" class="option-card p-4 rounded-2xl border-2 cursor-pointer transition-all duration-200 ${activeClass}">
+				<div class="flex items-center gap-3">
+					<div class="w-5 h-5 rounded-full border-2 flex items-center justify-center ${isSelected ? 'border-teal-500' : 'border-gray-300'}">
+						${isSelected ? '<div class="w-2.5 h-2.5 bg-teal-500 rounded-full"></div>' : ''}
+					</div>
+					<span class="${isSelected ? 'text-teal-900 font-bold' : 'text-gray-600'} text-[1.2em]">${opt}</span>
+				</div>
+			</div>`;
+	});
+        
+	document.getElementById('questionContainer').innerHTML = html;
+	document.getElementById('btnBack').classList.toggle('hidden', currentIdx === 0);
+	document.getElementById('btnNext').innerText = currentIdx === questions.length - 1 ? 'Selesai & Lihat Hasil' : 'Lanjut';
+}
+
+function selectOption(optIdx) {
+	userAnswers[currentIdx] = {
+		question: questions[currentIdx].q,
+		answer: questions[currentIdx].options[optIdx],
+		score: questions[currentIdx].score[optIdx],
+		optionIndex: optIdx
+	};
+	renderQuestion();
+}
+
+function validateAndNext() {
+	if (!userAnswers[currentIdx]) {
+		Swal.fire({ icon: 'warning', title: 'Belum Terisi', text: 'Silakan pilih jawaban Anda.', confirmButtonColor: '#0d9488' });
+		return;
+	}
+	if (currentIdx < questions.length - 1) {
+		currentIdx++; renderQuestion();
+	} else {
+		showFinalResult();
+	}
+}
+
+function prevQuestion() { if (currentIdx > 0) { currentIdx--; renderQuestion(); } }
+
+function showFinalResult() {
+	nextStep(4);
+	const totalScore = userAnswers.reduce((sum, ans) => sum + ans.score, 0);
+	const box = document.getElementById('resultBox');
+	const advice = document.getElementById('resultAdvice');
+	const detailed = document.getElementById('detailedAnswers');
+
+	const tglSekarang = new Date();
+	document.getElementById('captureDate').innerText = tglIndonesiaFormat(tglSekarang);
+
+	if (totalScore >= 100) {
+		box.className = "p-4 mb-4 text-[1.5em] text-center font-bold text-red-700 bg-red-50 border-red-200 rounded-xl leading-none";
+		box.innerHTML = "PERLU PEMERIKSAAN MEDIS";
+		advice.innerText = "Ditemukan tanda klinis yang memerlukan konsultasi segera. Jangan khawatir, tim dokter RSUD Cibabat siap membantu Anda.";
+	} else if (totalScore >= 7) {
+		box.className = "p-4 mb-4 text-[1.5em] text-center font-bold text-orange-700 bg-orange-50 border-orange-200 rounded-xl leading-none";
+		box.innerHTML = "RISIKO KUMULATIF TINGGI";
+		advice.innerText = "Anda memiliki profil risiko yang cukup tinggi berdasarkan riwayat. Disarankan melakukan USG/Mammografi rutin.";
+	} else {
+		box.className = "p-4 mb-4 text-[1.5em] text-center font-bold text-green-700 bg-green-50 border-green-200 rounded-xl leading-none";
+		box.innerHTML = "RISIKO RENDAH";
+		advice.innerText = "Kondisi saat ini tampak baik. Lanjutkan SADARI rutin setiap bulan dan pertahankan hidup sehat.";
+	}
+
+	//<div class="min-w-[15px]">${i+1}</div><div>${ans.question.substring(0,40)}...</div>
+	detailed.innerHTML = userAnswers.map((ans, i) => `
+		<div class="border-b border-gray-100 pb-1">
+			<div class="text-[0.9em] font-[500] leading-none flex flex-row justify-start items-start gap-0 mb-2">
+				<div class="min-w-[15px]">${i+1}</div><div>${ans.question}</div>
+			</div>
+			<div class="text-[1.1em] font-bold text-blue-700 leading-none ml-[15px] mb-4">${ans.answer}</div>
+		</div>
+	`).join('');
+}
+
+async function exportToPNG() {
+	const btn = document.getElementById('btnExport');
+	btn.disabled = true;
+	btn.innerHTML = "Memproses...";
+	try {
+		const dataUrl = await modernScreenshot.domToPng(document.getElementById('captureArea'), { scale: 2, backgroundColor: '#ffffff' });
+		const link = document.createElement('a');
+		link.download = `Skrining_Cibabat_${Date.now()}.png`;
+		link.href = dataUrl;
+		link.click();
+		Swal.fire('Berhasil!', 'Gambar telah disimpan.', 'success');
+	} catch (e) {
+		Swal.fire('Error', 'Gagal menyimpan gambar.', 'error');
+	} finally {
+		btn.disabled = false;
+		btn.innerHTML = "<span>📸</span> Simpan Hasil ke PNG";
+	}
+}
+
+function resetApp() {
+	Swal.fire({ title: 'Ulangi?', text: "Hapus semua jawaban?", icon: 'question', showCancelButton: true, confirmButtonColor: '#0d9488' })
+	.then(r => { if(r.isConfirmed) { currentIdx=0; userAnswers=[]; nextStep(1); } });
+}
+
+// 1. Fungsi Profil Layanan
+function showInfoService() {
+	Swal.fire({
+        title: 'Klinik Bedah Onkologi',
+        html: `
+            <div class="text-left text-sm space-y-2">
+                <p>RSUD Cibabat menyediakan layanan spesialis bedah onkologi untuk diagnosis dan terapi tumor/kanker.</p>
+                <ul class="list-disc ml-4 text-gray-600">
+                    <li>Biopsi Payudara</li>
+                    <li>Operasi Mastektomi</li>
+                    <li>Konsultasi Kemoterapi</li>
+                </ul>
+                <p class="mt-4 font-bold text-teal-700">Jam Layanan: Senin-Jumat (08:00 - 13:00)</p>
+            </div>
+        `,
+        confirmButtonText: 'Tutup',
+        confirmButtonColor: '#0d9488'
+    });
+}
+
+// 2. Fungsi Video (YouTube Embed atau Video Tag)
+                /*
+				<iframe class="w-full h-full rounded-lg" 
+                        src="${urlYoutube}" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+				*/
+function playVideo() {
+    Swal.fire({
+        title: 'Tutorial SADARI',
+        html: `
+            <div class="aspect-video w-full">
+				<video controls style="width: 100%; height: auto;">
+					<source src="${urlVideo}" type="video/mp4">
+				</video>
+            </div>
+        `,
+        showCloseButton: true,
+        showConfirmButton: false,
+        width: '90%'
+    });
+}
+
+// 3. Fungsi Podcast (Audio Player)
+function playPodcast() {
+    Swal.fire({
+        title: 'Dengar Edukasi',
+        html: `
+            <div class="p-4 bg-gray-50 rounded-lg">
+                <p class="text-xs mb-3 text-gray-500 italic text-center text-sm">Topik: Pentingnya Deteksi Dini Kanker</p>
+                <audio controls class="w-full">
+                    <source src="${urlPodcast}" type="audio/mpeg">
+                    Browser Anda tidak mendukung elemen audio.
+                </audio>
+            </div>
+        `,
+        showCloseButton: true,
+        confirmButtonText: 'Tutup',
+        confirmButtonColor: '#3b82f6'
+    });
+}
+
+// 4. Fungsi View Infographic
+function viewInfographic() {
+    const imgSrc = document.getElementById('posterImg').src;
+    // Buka di tab baru
+    window.open(imgSrc, '_blank');
+}
+
+
+
+const tglIndonesiaFormat = (tanggal) => {
+
+	let d;
+
+	if (tanggal instanceof Date && !isNaN(tanggal)) {
+		d = tanggal;
+	} else if (typeof tanggal === 'string') {
+		// Memisahkan "07/01/2026, 10.08.26"
+		const [tglPart, jamPart] = tanggal.split(', ');
+		const [hari, bulan, tahun] = tglPart.split('/');
+		const [jam, menit, detik] = jamPart ? jamPart.split('.') : [0, 0, 0];
+
+		d = new Date(tahun, bulan - 1, hari, jam, menit, detik);
+	}
+
+	if (!d || isNaN(d.getTime())) return "Format Tidak Valid";
+
+	// Array nama hari dan bulan dalam Bahasa Indonesia
+	const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+	const namaBulan = [
+		"Januari", "Februari", "Maret", "April", "Mei", "Juni",
+		"Juli", "Agustus", "September", "Oktober", "November", "Desember"
+	];
+
+	// Ambil komponen tanggal
+	const hariNama = namaHari[d.getDay()];
+	const tanggalTgl = d.getDate();
+	const bulanNama = namaBulan[d.getMonth()];
+	const tahunFull = d.getFullYear();
+  
+	// Format jam dan menit agar selalu 2 digit (misal: 08.05)
+	const jamFull = String(d.getHours()).padStart(2, '0');
+	const menitFull = String(d.getMinutes()).padStart(2, '0');
+	const detikFull = String(d.getSeconds()).padStart(2, '0');
+
+	// Susun hasil akhir: "Rabu, 7 Januari 2026 10:08 WIB"
+	return `${hariNama}, ${tanggalTgl} ${bulanNama} ${tahunFull} ${jamFull}:${menitFull}:${detikFull} WIB`;
+
+};
+</script>
+<script src="../js/back_home.js"></script> <!-- balikKandang(); -->
+</body>
+</html>

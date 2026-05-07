@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id-id" style="--document-width: 100vw;--document-height: 100vh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sukma Budi with Gemini">
+<meta name="description" content="Kenali kesehatan mental emosional Ibu setelah melahirkan. Gunakan alat skrining online EPDS untuk mendeteksi risiko depresi pasca persalinan secara mandiri di sini.">
+<meta property="og:title" content="RSUD Cibabat - Skrining Depresi Pasca Persalinan Dengan EPDS">
+<meta property="og:description" content="Kenali kesehatan mental emosional Ibu setelah melahirkan. Gunakan alat skrining online EPDS untuk mendeteksi risiko depresi pasca persalinan secara mandiri di sini.">
+<meta property="og:image" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta property="og:url" content="https://rsudcibabat.cimahikota.go.id/skrining/epds.html">
+<meta property="og:site_name" content="RSUD Cibabat Official Website">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RSUD Cibabat - Skrining Depresi Pasca Persalinan Dengan EPDS">
+<meta name="twitter:description" content="Kenali kesehatan mental emosional Ibu setelah melahirkan. Gunakan alat skrining online EPDS untuk mendeteksi risiko depresi pasca persalinan secara mandiri di sini.">
+<meta property="twitter:image:src" content="../images/logo/rsudcibabatwebmin.jpg">
+<meta name="twitter:url" content="https://rsudcibabat.cimahikota.go.id/skrining/epds.html">
+<meta name="twitter:site" content="@rscibabat">
+
+<title>RSUD Cibabat - Skrining Depresi Pasca Persalinan Dengan EPDS</title>
+
+<link rel="apple-touch-icon" href="../images/logo/rsclogo.png">
+<link rel="icon" type="image/svg+xml" href="../images/logo/rsclogo.webp">
+<link rel="canonical" href="https://rsudcibabat.cimahikota.go.id/skrining/epds.html">
+<link href="./dist/tailwind.css" rel="stylesheet">
+<link href="../css/sweetalert2.min.css" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "RSUD Cibabat - Skrining Depresi Pasca Persalinan Dengan EPDS",
+	"description": "Kenali kesehatan mental emosional Ibu setelah melahirkan. Gunakan alat skrining online EPDS untuk mendeteksi risiko depresi pasca persalinan secara mandiri di sini.",
+	"image": [
+		"../images/logo/rsudcibabatwebmin.jpg"
+	]
+}
+</script>
+<style>
+.bg-image {
+	background-image: url('../images/wallpaper/gradien1-minr.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+/* Styling saat label dipilih (menggunakan selector sibling) */
+input[type='radio']:checked + span {
+	background-color: #1e40af; /* Blue-800 */
+	color: white;
+	border-color: #1e40af;
+}
+/* Styling radio button saat aktif agar tetap terlihat jelas */
+input[type='radio']:checked {
+	border-color: #ffffff !important;
+	background-color: #ffffff !important;
+}
+/* Sembunyikan input secara fisik tapi tetap bisa diakses keyboard (tabbing) */
+.radio-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+/* Gaya saat opsi dipilih */
+.radio-hidden:checked + .custom-box {
+    color: white;
+	font-weight: 800;
+    background-color: #1e40af; /* Biru Tua */
+    border-color: #1e40af;
+    transform: scale(1.02);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+/* Efek fokus untuk aksesibilitas keyboard (saat user tekan Tab) */
+.radio-hidden:focus + .custom-box {
+    outline: 3px solid #60a5fa; /* Glow biru saat fokus */
+    outline-offset: 2px;
+}
+
+.highlight-error {
+	border: 4px solid #dc2626 !important; /* Red 600 lebih tebal */
+	background-color: #fff1f2 !important;
+}
+
+/* ========== VERTICAL BRAND ========== */
+.vertical-tag {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	pointer-events: none;
+}
+.vertical-tag span {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	white-space: nowrap;
+}
+/* ========== VERTICAL BRAND ========== */
+</style>
+</head>
+<body class="bg-gray-100 font-sans leading-relaxed text-gray-900">
+
+<div class="relative max-w-4xl mx-auto my-10">
+
+	<div id="capture-area" class="bg-white rounded-2xl shadow-2xl mb-10">
+
+		<header class="p-6">
+			<small class="text-sm leading-none">Instrumen EPDS</small>
+			<h1 class="text-3xl text-slate-800 font-black leading-none">Skrining Depresi Pasca Persalinan</h1>
+			<p class="text-md text-slate-700 font-semibold uppercase leading-none mt-2">Skrining Mandiri RSUD Cibabat</p>
+		</header>
+
+		<div class="my-8 p-6 bg-[#f2f2f2] border-l-[5px] border-solid border-[#e1e1e1]">
+			<p class="mb-2 text-sm font-bold">DISCLAIMER</p>
+			<p class="mb-8 text-sm leading-tight">
+				<a href="../kebijakan-privasi.html" target="_blank">Privasi Anda dijamin UU PDP 27 2022</a> proses skrining sepenuhnya berjalan di browser client dan tidak ada data yang dikirim ataupun disimpan di server manapun.
+				Hasil skrining ini bukanlah diagnosis medis. Saran dan penegakkan diagnosis medis tetap dilakukan dengan konseling langsung bersama <a href="#panel-klinik">Dokter Ahli RSUD Cibabat</a>.
+				Skrining mengacu pada riset Cox, J. L., et al. (1987) <a href="https://doi.org/10.1192/bjp.150.6.782" target="_blank" rel="noopener noreferrer">Edinburgh Postnatal Depression Scale [EPDS]</a>.
+			</p>
+			<p class="md:text-4xl font-semibold text-center leading-none">
+				Halo Bunda silahkan jawaban yang paling menggambarkan perasaan Bunda selama <span class="text-[#3186ff]">7 hari terakhir</span>.
+			</p>
+		</div>
+
+		<form id="epds-form" class="mb-8 relative">
+			<div id="questions-container" class="mb-8"></div>
+			<div id="result-box" class="hidden mt-12 p-8 rounded-b-2xl text-center border-4 transition-all transition-discrete duration-500">
+				<p class="text-lg font-bold">SKOR ANDA</p>
+				<p id="result-score" class="mb-4 text-8xl font-black"></p>
+				<p id="result-status" class="mb-4 text-4xl md:text-6xl font-black uppercase tracking-tight"></p>
+				<p id="result-advice" class="mb-8 max-w-2xl mx-auto text-xl font-medium leading-tight"></p>
+				<p id="result-date" class="text-xs font-bold text-gray-500"></p>
+			</div>
+		</form>
+	</div>
+
+	<div class="my-8 p-6 md:p-6 flex flex-col flex-wrap justify-center gap-3 screenshot-target">
+		<button onclick="processResult()" class="px-2 md:px-8 py-5 text-[1.1em] md:text-[1.5em] bg-image font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer">Hitung</button>
+		<div id="screenshot-buttonblock" class="grid grid-cols-2 gap-2">
+			<button onclick="takeScreenshot()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Screenshot</button>
+			<button onclick="shareWA()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Bagikan</button>
+		</div>
+		<div class="grid grid-cols-2 gap-2">
+			<button onclick="resetSurvey()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Reset</button>
+			<button onclick="balikKandang()" class="px-2 md:px-8 py-3 text-[0.9em] md:text-[1.1em] font-bold uppercase leading-none bg-white hover:bg-gray-100 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Kembali</button>
+		</div>
+	</div>
+
+	<div id="panel-klinik" class="p-6 md:p-6 rounded-2xl bg-image shadow-2xl screenshot-target">
+		<div class="text-[3em] text-black text-center font-black leading-none pt-10">
+			Bunda Butuh Teman Bicara ?
+		</div>
+		<div class="py-10 text-[1.2em] md:text-[1.7em] font-semibold text-black text-center leading-tight">
+			Kami memahami betul risiko yang dihadapi dan perjuangan berat selama melahirkan dan Bunda tidak perlu menanggungnya sendirian mari berbagi dan membicarakannya bersama Dokter Ahli RSUD Cibabat
+		</div>
+		<div class="mb-6 text-[1.3em] md:text-[2.5em] text-black text-center font-black leading-none">
+			Konsultasi Dokter Ahli
+		</div>
+		<div class="grid grid-cols-2 gap-2 pb-10">
+			<button class="px-2 py-4 text-[16px] md:text-[18px] font-bold uppercase leading-none bg-white hover:bg-gray-300 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Janji Temu</button>
+			<button class="px-2 py-4 text-[16px] md:text-[18px] font-bold uppercase leading-none bg-white hover:bg-gray-300 border border-gray-300 rounded-md shadow-md cursor-pointer transition-all">Profil Layanan</button>
+		</div>
+	</div>
+
+	<!-- VERTICAL BRAND -->
+	<div class="absolute vertical-tag left right-[96%] md:right-[100%] p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+
+	<div class="absolute vertical-tag right left-[96%] md:left-[100%] rotate-180 p-0 text-xs text-gray-300 uppercase tracking-widest">
+		<span>RSUD Cibabat Kota Cimahi</span>
+		<span>Sukma Budi + Gemini</span>
+		<span>RSUD Cibabat Kota Cimahi</span>
+	</div>
+	<!-- VERTICAL BRAND -->
+
+</div>
+
+<script src="../js/sweetalert2.all.min.js"></script>
+<script src="../js/modern-screenshot4.6.8.min.js"></script>
+
+<script>
+const questions = [
+	{ q: "Saya mampu tertawa dan melihat sisi lucu dari berbagai hal", options: ["Sama seperti biasanya", "Sekarang tidak begitu banyak", "Sangat kurang dibandingkan biasanya", "Tidak bisa sama sekali"] },
+	{ q: "Saya menantikan segala sesuatu dengan rasa senang", options: ["Sama seperti biasanya", "Kurang dari biasanya", "Sangat kurang dari biasanya", "Hampir tidak pernah"] },
+	{ q: "Saya menyalahkan diri sendiri secara tidak perlu ketika ada hal yang salah", options: ["Ya, seringkali", "Ya, kadang-kadang", "Tidak terlalu sering", "Tidak pernah"] },
+	{ q: "Saya merasa cemas atau khawatir tanpa alasan yang jelas", options: ["Tidak, tidak pernah", "Hampir tidak pernah", "Ya, kadang-kadang", "Ya, sering sekali"] },
+	{ q: "Saya merasa takut atau panik tanpa alasan yang sangat kuat", options: ["Ya, sering sekali", "Ya, kadang-kadang", "Tidak, tidak terlalu sering", "Tidak, tidak pernah"] },
+	{ q: "Banyak hal yang menekan saya", options: ["Ya, sebagian besar waktu saya tidak dapat mengatasinya", "Ya, kadang-kadang saya tidak dapat mengatasinya", "Tidak, sebagian besar waktu saya mengatasinya dengan baik", "Tidak, saya mengatasinya sebaik biasanya"] },
+	{ q: "Saya merasa sangat tidak bahagia sehingga saya sulit tidur", options: ["Ya, seringkali", "Ya, kadang-kadang", "Tidak terlalu sering", "Tidak, tidak pernah"] },
+	{ q: "Saya merasa sedih atau sengsara", options: ["Ya, seringkali", "Ya, kadang-kadang", "Tidak terlalu sering", "Tidak, tidak pernah"] },
+	{ q: "Saya merasa sangat tidak bahagia sehingga saya menangis", options: ["Ya, seringkali", "Ya, kadang-kadang", "Hanya sesekali", "Tidak, tidak pernah"] },
+	{ q: "Pikiran untuk menyakiti diri sendiri pernah muncul dalam pikiran saya", options: ["Ya, cukup sering", "Kadang-kadang", "Hampir tidak pernah", "Tidak pernah"] }
+];
+
+const container = document.getElementById('questions-container');
+
+questions.forEach((item, index) => {
+	let html = `
+		<div id="q-block-${index}" class="mb-6 p-6 transition-all duration-300">
+			<div class="mb-4 flex flex-row justify-start items-start gap-[10px] md:gap-[30px] text-3xl md:text-6xl font-semibold text-[#107fe1] leading-none">
+				<div class="w-[60px] md:w-[100px] md:max-w-[100] flex items-center justify-center text-center text-white bg-[#77bfff]">
+					<span>${index + 1}</span>
+				</div>
+				<div class="leading-none w-full">${item.q}</div>
+			</div>
+			<div class="mt-6 p-6 grid grid-cols-1 gap-4">
+				${item.options.map((opt, i) => `
+					<label class="block cursor-pointer group">
+						<input type="radio" name="q${index}" value="${i}" 
+						onchange="removeHighlight(${index})"
+						class="radio-hidden">
+						<div class="p-4 md:p-5 custom-box flex items-center justify-center border-2 border-gray-300 rounded-2xl transition-all duration-100 bg-white hover:bg-blue-100 text-center leading-none">
+							<span class="md:text-4xl font-mediumblack">
+								${opt}
+							</span>
+						</div>
+					</label>
+				`).join('')}
+			</div>
+		</div>
+	`;
+	container.insertAdjacentHTML('beforeend', html);
+});
+
+function removeHighlight(index) {
+	document.getElementById(`q-block-${index}`).classList.remove('highlight-error');
+}
+
+function validateForm() {
+	let unanswered = [];
+	questions.forEach((_, index) => {
+		if (!document.querySelector(`input[name="q${index}"]:checked`)) {
+			const block = document.getElementById(`q-block-${index}`);
+			unanswered.push(block);
+			block.classList.add('highlight-error');
+		}
+	});
+
+	if (unanswered.length > 0) {
+		Swal.fire({
+			icon: 'warning',
+			title: '<span class="text-2xl font-black">Belum Selesai</span>',
+			html: '<p class="text-lg">Mohon maaf Bunda lengkapi pertanyaan yang ditandai <b>Kotak Merah Tebal</b> agar hasil akurat.</p>',
+			confirmButtonText: 'SAYA MENGERTI',
+			confirmButtonColor: '#1e40af',
+			returnFocus: false
+		}).then(() => {
+			unanswered[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+		});
+		return false;
+	}
+	return true;
+}
+
+function processResult() {
+	if (!validateForm()) return;
+
+	let total = 0;
+	questions.forEach((_, index) => {
+		total += parseInt(document.querySelector(`input[name="q${index}"]:checked`).value);
+	});
+
+	const resultBox = document.getElementById('result-box');
+
+	if (total >= 10) {
+		document.getElementById('result-status').innerText = "PERLU KONSULTASI";
+		document.getElementById('result-status').className = "text-red-700 mb-4 text-4xl md:text-6xl font-black uppercase tracking-tight";
+		resultBox.className = "bg-red-50 border-red-600 mt-12 p-8 rounded-b-2xl text-center border-4 transition-all transition-discrete duration-500";
+		document.getElementById('result-advice').innerText = "Bunda memerlukan dukungan profesional dan tetap tenang jangan khawatir. Mohon simpan gambar ini dan segera Bunda berkonsultasi dengan Dokter Ahli RSUD Cibabat untuk bantuan lebih lanjut.";
+	} else {
+		document.getElementById('result-status').innerText = "KONDISI STABIL";
+		document.getElementById('result-status').className = "text-emerald-800 mb-4 text-4xl md:text-6xl font-black uppercase tracking-tight";
+		resultBox.className = "bg-emerald-50 border-emerald-600 mt-12 p-8 rounded-b-2xl text-center border-4 transition-all transition-discrete duration-500";
+		document.getElementById('result-advice').innerText = "Skor Bunda dalam batas normal. Tetap jaga kesehatan mental dan istirahat yang cukup selama Bunda dalam masa pemulihan.";
+	}
+
+	document.getElementById('result-score').innerText = `${total}`;
+
+	const tglSekarang = new Date().toLocaleString('id-ID');
+	document.getElementById('result-date').innerText = tglIndonesiaFormat(tglSekarang);
+	
+	resultBox.classList.remove('hidden');
+
+	const btnSs = document.getElementById('screenshot-buttonblock');
+	btnSs.classList.remove('opacity-50', 'cursor-not-allowed');
+	btnSs.disabled = false;
+
+	resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+async function takeScreenshot() {
+	const btn = document.getElementById('screenshot-buttonblock');
+	const originalText = btn.innerText;
+	btn.innerText = "PROSES...";
+
+	try {
+		const node = document.getElementById('capture-area');
+		const dataUrl = await modernScreenshot.domToPng(node);
+		const link = document.createElement('a');
+		link.download = `HASIL_SKRINING_RSUD_CIBABAT_${Date.now()}.png`;
+		link.href = dataUrl;
+		link.click();
+	} catch (err) {
+		Swal.fire('Gagal', 'Gagal mengambil gambar, silakan coba lagi.', 'error');
+	} finally {
+		btn.innerText = originalText;
+	}
+}
+
+function resetSurvey() {
+	document.getElementById('epds-form').reset();
+	document.getElementById('result-box').classList.add('hidden');
+	document.querySelectorAll('[id^="q-block-"]').forEach(b => b.classList.remove('highlight-error'));
+
+	const btnSs = document.getElementById('screenshot-buttonblock');
+	btnSs.classList.add('opacity-50', 'cursor-not-allowed');
+	btnSs.disabled = true;
+
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function shareWA() {
+	const text = encodeURIComponent(`Halo, mari cek kesehatan mental pasca persalinan di RSUD Cibabat secara mandiri: ${window.location.href}`);
+	window.open(`https://wa.me/?text=${text}`, '_blank');
+}
+
+
+const tglIndonesiaFormat = (tanggal) => {
+
+	let d;
+
+	if (tanggal instanceof Date && !isNaN(tanggal)) {
+		d = tanggal;
+	} else if (typeof tanggal === 'string') {
+		// Memisahkan "07/01/2026, 10.08.26"
+		const [tglPart, jamPart] = tanggal.split(', ');
+		const [hari, bulan, tahun] = tglPart.split('/');
+		const [jam, menit, detik] = jamPart ? jamPart.split('.') : [0, 0, 0];
+
+		d = new Date(tahun, bulan - 1, hari, jam, menit, detik);
+	}
+
+	if (!d || isNaN(d.getTime())) return "Format Tidak Valid";
+
+	// Array nama hari dan bulan dalam Bahasa Indonesia
+	const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+	const namaBulan = [
+		"Januari", "Februari", "Maret", "April", "Mei", "Juni",
+		"Juli", "Agustus", "September", "Oktober", "November", "Desember"
+	];
+
+	// Ambil komponen tanggal
+	const hariNama = namaHari[d.getDay()];
+	const tanggalTgl = d.getDate();
+	const bulanNama = namaBulan[d.getMonth()];
+	const tahunFull = d.getFullYear();
+  
+	// Format jam dan menit agar selalu 2 digit (misal: 08.05)
+	const jamFull = String(d.getHours()).padStart(2, '0');
+	const menitFull = String(d.getMinutes()).padStart(2, '0');
+	const detikFull = String(d.getSeconds()).padStart(2, '0');
+
+	// Susun hasil akhir: "Rabu, 7 Januari 2026 10:08 WIB"
+	return `${hariNama}, ${tanggalTgl} ${bulanNama} ${tahunFull} ${jamFull}:${menitFull}:${detikFull} WIB`;
+
+};
+</script>
+<script src="../js/back_home.js"></script> <!-- balikKandang(); -->
+</body>
+</html>
